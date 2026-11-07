@@ -57,4 +57,18 @@ $$\text{Spine Width} = 64 \times 0.002252 = \mathbf{0.1441\text{ inches}}$$
 * **Tổng chiều cao (Overall Height):**
   $$\text{Trim Height (8.5")} + (2 \times \text{Bleed 0.125"}) = \mathbf{8.750\text{ inches}}$$
   *(Tương đương $2625\text{ px}$ tại $300\text{ DPI}$)*
-* **Lưu ý gáy:** Sách dưới 80 trang không được in chữ lên gáy theo quy định của KDP.
+---
+
+## 5. THIẾT KẾ BỐ CỤC KHUNG VIỀN VÀ DÒNG DẪN CÂU CHUYỆN (FRAMED STORYBOOK LAYOUT)
+
+Để biến mỗi trang tranh thành một trang truyện tranh hoàn chỉnh, nâng cao trải nghiệm tô màu:
+* **Khung viền tranh (Art Frame):** Kích thước $6.85 \times 6.85\text{ inches}$ ($17.4 \times 17.4\text{ cm}$), bo góc nhẹ $6\text{ pt}$, viền đen $1.8\text{ pt}$. Giữ lề an toàn hoàn hảo $0.88\text{ in}$ lề hai bên và $0.60\text{ in}$ lề trên.
+* **Vị trí dòng dẫn câu chuyện (Narrative Caption Area):**
+  * Nằm trực tiếp dưới đáy khung viền tại $Y = 0.88\text{ in}$.
+  * Font chữ: `Helvetica-Oblique` (in nghiêng), cỡ chữ $11\text{ pt}$, căn giữa trang.
+  * Hiển thị câu trích dẫn dẫn dắt cảm xúc người tô màu (ví dụ: *"A quiet morning begins with a warm cup of herbal tea."*).
+* **Số trang (Page Pagination):**
+  * Nằm ở chân trang tại $Y = 0.48\text{ in}$.
+  * Font chữ: `Helvetica`, cỡ chữ $9\text{ pt}$, màu xám `#777777` (`— Page 01 —`).
+* **Đa dạng hóa màu sắc (Color Opportunities):** Mỗi bức tranh được thiết kế tối thiểu 5 nhóm đối tượng mang dải màu tự nhiên khác nhau (phục trang, hoa lá, trái cây, bánh ngọt, họa tiết thảm) giúp người tô màu thỏa sức sáng tạo với hộp màu 24–48 cây.
+

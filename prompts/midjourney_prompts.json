@@ -3,180 +3,210 @@
     "page": 1,
     "id": "mj_01_morning_tea",
     "title": "Morning Sun & Herbal Tea",
-    "prompt": "cute chubby capybara sitting on comfortable wooden armchair holding steaming mug of herbal tea, round sunny window background, coloring book page for adults, clean bold vector line art, thick black outlines, simple shapes, cozy hygge aesthetic, flat solid white background, zero shading, no gradients --ar 1:1 --stylize 50 --no color, shading, realistic, photo, grayscale, gradient, 3d"
+    "caption": "A quiet morning begins with a warm cup of herbal tea.",
+    "prompt": "chubby capybara in cozy knitted sweater sitting on floral armchair holding ceramic tea mug with lemon slice, wooden table with vase of bright daisies and plate of iced cinnamon rolls, checkered rug, coloring book page, bold vector line art, thick black outlines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shading, grayscale, realistic"
   },
   {
     "page": 2,
     "id": "mj_02_watering_plants",
     "title": "Watering Greenhouse Succulents",
-    "prompt": "sweet capybara wearing small straw hat holding metal watering can, watering cute potted succulents and houseplants on wooden shelves, adult coloring book page, bold thick black lines, clean vector art, flat 2D minimalist style, pure white background, no shading --ar 1:1 --stylize 50 --no color, shading, gray, realistic"
+    "caption": "Growing happiness, one tiny leaf at a time.",
+    "prompt": "sweet capybara in garden apron and straw hat watering tiered shelves of potted succulents, terracotta pots, hanging ivy, and purple violets, adult coloring book page, bold thick black lines, clean vector art, pure white background, zero shading --ar 1:1 --stylize 50 --no color, shading, gray"
   },
   {
     "page": 3,
     "id": "mj_03_village_bakery",
     "title": "The Village Artisan Bakery",
-    "prompt": "friendly capybara holding woven basket filled with baguettes and croissants in a cozy village bakery, shelves of bread loaves, bold easy coloring book page, thick black outlines, crisp vector lines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, gray, shadow"
+    "caption": "The sweetest aroma in the whole village.",
+    "prompt": "capybara baker in striped apron in rustic bakery holding basket of baguettes, glazed fruit tarts with strawberries and blueberries, jars of jam on shelves, bold easy coloring book page, thick black outlines, crisp vector lines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, gray, shadow"
   },
   {
     "page": 4,
     "id": "mj_04_fruit_market",
     "title": "Market Stroll with Straw Basket",
-    "prompt": "charming capybara carrying tote basket browsing an outdoor market fruit stall, wooden crates with apples and strawberries, coloring book page, bold thick outlines, simple shapes, pure white background, zero shading, no gradients --ar 1:1 --stylize 50 --no color, grayscale, texture"
+    "caption": "Simple treats from a sunny morning stroll.",
+    "prompt": "charming capybara with backpack and market basket at fruit stand with crates of red apples, yellow bananas, purple grapes, carrots, striped awning, coloring book page, bold thick outlines, simple shapes, pure white background, zero shading --ar 1:1 --stylize 50 --no color, grayscale"
   },
   {
     "page": 5,
     "id": "mj_05_vintage_bicycle",
     "title": "Bicycle with a Flower Basket",
-    "prompt": "happy capybara riding vintage cruiser bicycle with front wicker basket filled with daisies, gentle country road, bold coloring book page, thick black vector outlines, clean lines, minimalist style, flat white background, no shading --ar 1:1 --stylize 50 --no color, shadow, gray"
+    "caption": "Pedaling slowly down peaceful country roads.",
+    "prompt": "cheerful capybara with polka-dot neck scarf riding cruiser bicycle with basket full of sunflowers, pink tulips, bluebells, cobblestone path with butterflies, bold coloring book page, thick vector lines, flat white background, no shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 6,
     "id": "mj_06_garden_breakfast",
     "title": "Breakfast by the Garden Table",
-    "prompt": "cute capybara sitting at garden table eating a tall stack of pancakes with butter and berries, outdoor garden patio, clean coloring book page, bold thick outlines, solid white background, flat 2D style, no shading --ar 1:1 --stylize 50 --no color, gray, shading, gradient"
+    "caption": "Sweet pancakes taste better under the open sky.",
+    "prompt": "cute capybara at garden table with floral cloth eating tall pancake stack with melting butter, bowl of strawberries and blackberries, juice pitcher, potted geraniums, clean coloring book page, bold thick outlines, solid white background, no shading --ar 1:1 --stylize 50 --no color, gray, shading"
   },
   {
     "page": 7,
     "id": "mj_07_garden_snail",
     "title": "Greeting the Garden Snail",
-    "prompt": "gentle capybara crouching in garden admiring a tiny cute snail on a large cabbage leaf, clean vector line art coloring page, thick black strokes, simple shapes, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shadow, grey"
+    "caption": "There is no rush to get anywhere today.",
+    "prompt": "gentle capybara smiling at cute snail with spiral shell on cabbage leaf in garden bed with orange pumpkins, red tomatoes on vines, ladybugs, clean vector line art coloring page, thick black strokes, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 8,
     "id": "mj_08_window_nook",
     "title": "Reading in the Window Nook",
-    "prompt": "cozy capybara curled up in a bay window nook with pillows reading an open hardcover book, bold line coloring book page, thick black outlines, flat minimalist vector art, solid white background, no shading --ar 1:1 --stylize 50 --no color, gray tones, shading"
+    "caption": "Lost in cozy adventures between the pages.",
+    "prompt": "cozy capybara in bay window seat with striped pillows and patchwork quilt reading book with mug of cocoa, string lights, potted ferns, rain on glass, bold line coloring book page, thick black outlines, solid white background, no shading --ar 1:1 --stylize 50 --no color, gray"
   },
   {
     "page": 9,
     "id": "mj_09_antique_bookstore",
     "title": "The Cozy Antiquarian Bookstore",
-    "prompt": "capybara wearing round eyeglasses on a wooden library stool organizing books on tall library shelves, adult coloring book page, bold thick lines, crisp vector edges, pure solid white background, no shading --ar 1:1 --stylize 50 --no color, grayscale, 3d"
+    "caption": "Keeper of stories and dusty forgotten wonders.",
+    "prompt": "capybara in spectacles and wool vest on rolling library ladder, shelves of antique books with embossed spines, stained glass lamp, oriental rug, adult coloring book page, bold thick lines, crisp vector edges, pure solid white background, no shading --ar 1:1 --stylize 50 --no color, grayscale"
   },
   {
     "page": 10,
     "id": "mj_10_ducklings_tea",
     "title": "Afternoon Tea with Baby Ducklings",
-    "prompt": "kind capybara having picnic tea party with three tiny ducklings, miniature teacups and cookies on a picnic cloth, bold easy coloring book page, thick clean outlines, solid white background, no shading --ar 1:1 --stylize 50 --no color, gray, shading"
+    "caption": "The finest company is always warm and gentle.",
+    "prompt": "kind capybara having tea party on red checkered picnic blanket with three fluffy ducklings in bowties, tiered tray of macarons and cupcakes, floral teapot, bold easy coloring book page, thick clean outlines, solid white background, no shading --ar 1:1 --stylize 50 --no color, gray"
   },
   {
     "page": 11,
     "id": "mj_11_pottery_studio",
     "title": "Pottery Studio Workshop",
-    "prompt": "capybara sitting at pottery wheel shaping clay vase with paws, pottery studio background, clean vector coloring book page, bold thick strokes, flat 2D style, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shading, texture"
+    "caption": "Shaping calm thoughts with loving hands.",
+    "prompt": "capybara in clay apron at pottery wheel shaping vase, shelves with glazed patterned bowls, pigment bottles, brushes in mugs, dried lavender bunches, clean vector coloring book page, bold thick strokes, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shading"
   },
   {
     "page": 12,
     "id": "mj_12_flower_arranging",
     "title": "Flower Arranging in Glass Jars",
-    "prompt": "cute capybara putting sunflowers and lavender in glass jars tied with twine on wooden table, coloring book page, bold thick black outlines, clean minimalist shapes, pure white background, no shading --ar 1:1 --stylize 50 --no color, shadow, gray"
+    "caption": "Bringing a splash of wild nature indoors.",
+    "prompt": "capybara arranging sunflowers, purple irises, pink roses in glass jars with twine on potting bench with ribbon spools, garden shears, seed packets, coloring book page, bold thick black outlines, pure white background, no shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 13,
     "id": "mj_13_meadow_painting",
     "title": "Painting Watercolors in the Meadow",
-    "prompt": "artistic capybara standing at wooden painting easel with brush and palette in wildflower meadow, bold line coloring book page, thick black outlines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, grayscale, gradient"
+    "caption": "Painting colors that whisper tranquility.",
+    "prompt": "artist capybara in beret at wooden easel in wildflower meadow with colorful palette, brush, canvas, picnic basket, windmill on hill, bold line coloring book page, thick black outlines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, grayscale"
   },
   {
     "page": 14,
     "id": "mj_14_coffee_with_hedgehog",
     "title": "Coffee Break with Hedgehog Friend",
-    "prompt": "relaxed capybara and cute little hedgehog drinking coffee across cafe table, latte art mugs, coloring book page, bold thick black lines, clean vector art, flat white background, no shading --ar 1:1 --stylize 50 --no color, shadow, gray"
+    "caption": "Warm conversations on a breezy afternoon.",
+    "prompt": "capybara and little hedgehog at cafe table with latte art mugs, plate of strawberry shortcake, striped umbrella, potted hydrangeas, menu board, coloring book page, bold thick black lines, clean vector art, flat white background, no shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 15,
     "id": "mj_15_sewing_quilt",
     "title": "Sewing a Patchwork Quilt",
-    "prompt": "capybara sitting at vintage mechanical sewing machine stitching patterned quilt, adult coloring book page, bold thick strokes, simple clean lines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, gray, shading"
+    "caption": "Stitching warmth into every corner.",
+    "prompt": "capybara at vintage sewing machine stitching patchwork quilt with floral and polka-dot squares, yarn balls in baskets, tomato pincushion, thread spools, adult coloring book page, bold thick strokes, solid white background, zero shading --ar 1:1 --stylize 50 --no color, gray"
   },
   {
     "page": 16,
     "id": "mj_16_spice_jars",
     "title": "Arranging the Spice Jars",
-    "prompt": "capybara in rustic cottage kitchen putting paper labels on glass spice jars, bold easy coloring book page, thick black outlines, minimalist vector art, solid white background, no shading --ar 1:1 --stylize 50 --no color, shadow, grayscale"
+    "caption": "Every scent tells a story of cozy comfort.",
+    "prompt": "capybara in cottage kitchen labeling spice jars with cinnamon sticks, turmeric, bay leaves, star anise, tiled backsplash, hanging copper pots, bowl of lemons, bold easy coloring book page, thick black outlines, solid white background, no shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 17,
     "id": "mj_17_lily_pond_boat",
-    "title": "Floating Leaf Boat on the Lily Pond",
-    "prompt": "capybara sitting peacefully in small rowboat on pond with blooming lotus flowers and giant lily pads, bold line coloring book page, thick clean outlines, pure solid white background, zero shading --ar 1:1 --stylize 50 --no color, gray, gradient"
+    "title": "Floating Leaf Boat on Lily Pond",
+    "caption": "Floating gently wherever the calm waters lead.",
+    "prompt": "capybara in wooden rowboat on pond with giant green lily pads, pink blooming lotus, swimming orange koi fish, dragonflies, bold line coloring book page, thick clean outlines, pure solid white background, zero shading --ar 1:1 --stylize 50 --no color, gray"
   },
   {
     "page": 18,
     "id": "mj_18_onsen_bath",
     "title": "The Relaxing Onsen Springs",
-    "prompt": "blissful capybara soaking in outdoor Japanese hot spring bath with small yuzu citrus fruit balanced on head, smooth rocks, bold coloring book page, thick dark outlines, clean white background, zero shading --ar 1:1 --stylize 50 --no color, shadow, gray"
+    "caption": "Total peace is doing absolutely nothing at all.",
+    "prompt": "blissful capybara soaking in rock hot spring bath with yellow yuzu fruit on head, steam ripples, cherry blossom branch, wooden buckets, bold coloring book page, thick dark outlines, clean white background, zero shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 19,
     "id": "mj_19_mushroom_foraging",
     "title": "Mushroom Foraging in Pine Forest",
-    "prompt": "capybara carrying woven basket in pine woods looking at cute mushrooms growing near tree stump, coloring book page, bold thick outlines, simple shapes, pure white background, no shading --ar 1:1 --stylize 50 --no color, grayscale, texture"
+    "caption": "Treasures waiting beneath the soft forest moss.",
+    "prompt": "capybara with basket in pine forest finding red polka-dot toadstools, golden chanterelles, wild blueberries, pinecones, squirrel in tree, coloring book page, bold thick outlines, pure white background, no shading --ar 1:1 --stylize 50 --no color, grayscale"
   },
   {
     "page": 20,
     "id": "mj_20_hammock_nap",
     "title": "Hammock Nap Between Apple Trees",
-    "prompt": "chubby capybara taking a nap in a striped hammock hung between two apple trees with straw hat on tummy, bold line coloring book page, thick vector lines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shading, gray"
+    "caption": "Afternoon naps are sweet gifts to the soul.",
+    "prompt": "chubby capybara napping in striped hammock between apple trees full of red apples, straw hat on tummy, singing birds, cider bottle on grass, bold line coloring book page, thick vector lines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shading"
   },
   {
     "page": 21,
     "id": "mj_21_bird_watching",
     "title": "Bird Watching with Binoculars",
-    "prompt": "curious capybara looking through brass vintage binoculars at cute bird on flowering cherry branch, clean coloring book page, bold thick strokes, pure white background, zero shading --ar 1:1 --stylize 50 --no color, shadow, grey"
+    "caption": "Listening closely to the songs of the breeze.",
+    "prompt": "curious capybara looking through binoculars at wooden birdhouse in blooming magnolia tree with three songbirds, bird feeder, butterfly bush, clean coloring book page, bold thick strokes, pure white background, zero shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 22,
     "id": "mj_22_rainy_porch",
-    "title": "Rainy Day at the Covered Porch",
-    "prompt": "capybara wrapped in blanket sitting on wooden porch swing watching rain fall with ivy vines, bold easy coloring book page, thick clean vector lines, pure solid white background, no shading --ar 1:1 --stylize 50 --no color, gray tones, shading"
+    "title": "Rainy Day at Covered Porch",
+    "caption": "The soothing rhythm of gentle raindrops.",
+    "prompt": "capybara wrapped in plaid blanket on cushioned porch swing watching rain fall onto hydrangeas, steaming tea, yellow rainboots, hanging flower baskets, bold easy coloring book page, thick clean vector lines, pure solid white background, no shading --ar 1:1 --stylize 50 --no color, gray"
   },
   {
     "page": 23,
     "id": "mj_23_stream_fishing",
-    "title": "Fly-Fishing in the Whispering Stream",
-    "prompt": "calm capybara standing on river stone holding bamboo fishing rod, clean mountain stream with river pebbles, adult coloring book page, bold thick outlines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shadow, grayscale"
+    "title": "Fly-Fishing in Whispering Stream",
+    "caption": "Patience is the sweetest kind of quiet.",
+    "prompt": "capybara in fishing vest with badges standing on river stones with bamboo rod, spotted trout in stream, cattails, water ripples, pine trees, adult coloring book page, bold thick outlines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 24,
     "id": "mj_24_willow_picnic",
-    "title": "Picnic Under the Great Willow Tree",
-    "prompt": "happy capybara sitting on checkered picnic blanket under weeping willow tree with sandwich and pitcher of lemonade, bold coloring book page, thick lines, simple vector art, pure white background, zero shading --ar 1:1 --stylize 50 --no color, gray, shading"
+    "title": "Picnic Under Great Willow Tree",
+    "caption": "Basking in the gentle shade of gratitude.",
+    "prompt": "capybara on gingham picnic cloth under weeping willow tree with picnic basket, sandwiches, pitcher of pink lemonade with lemon slices, berry pie, daisies, bold coloring book page, thick lines, pure white background, zero shading --ar 1:1 --stylize 50 --no color, gray"
   },
   {
     "page": 25,
     "id": "mj_25_apple_pie",
     "title": "Baking Fresh Apple Cinnamon Pie",
-    "prompt": "cute capybara wearing checkered apron holding freshly baked lattice pie in cozy kitchen, coloring book page, bold thick black outlines, crisp vector lines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shading, gray tones"
+    "caption": "The kitchen is full of warmth, sugar, and spice.",
+    "prompt": "capybara in floral baking apron with oven mitts holding lattice apple pie, counter with rolling pin, bowl of red apples, mixing bowl, flour, cinnamon jars, coloring book page, bold thick black outlines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shading"
   },
   {
     "page": 26,
     "id": "mj_26_fireplace_cocoa",
     "title": "Fireplace Warmth & Hot Cocoa",
-    "prompt": "relaxed capybara sitting on wool rug before brick fireplace holding mug of hot cocoa with marshmallows, adult coloring book page, bold thick outlines, flat 2D style, solid white background, no shading --ar 1:1 --stylize 50 --no color, shadow, gray"
+    "caption": "Cozy embers chase the evening chill away.",
+    "prompt": "capybara in striped pajama pants on braided rug before brick fireplace with glowing logs, holding jumbo mug of cocoa with marshmallows, stockings on mantel, sleeping cat, adult coloring book page, bold thick outlines, solid white background, no shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 27,
     "id": "mj_27_brass_telescope",
-    "title": "Stargazing with a Brass Telescope",
-    "prompt": "capybara on attic balcony looking through brass telescope at crescent moon and stars, clean vector line art coloring book page, bold thick black strokes, solid white background, zero shading --ar 1:1 --stylize 50 --no color, gradient, shading"
+    "title": "Stargazing with Brass Telescope",
+    "caption": "Wishing on a sky full of quiet dreams.",
+    "prompt": "capybara on attic balcony looking through brass telescope at crescent moon, constellations, shooting stars, paper lanterns, balcony flowerboxes, clean vector line art coloring book page, bold thick black strokes, solid white background, zero shading --ar 1:1 --stylize 50 --no color, gradient"
   },
   {
     "page": 28,
     "id": "mj_28_ukulele_lullaby",
-    "title": "Playing Acoustic Lullabies on Ukulele",
-    "prompt": "musical capybara sitting on cushion playing small wooden ukulele next to scented candle, bold coloring book page, thick clean outlines, minimalist vector art, pure white background, no shading --ar 1:1 --stylize 50 --no color, shadow, grayscale"
+    "title": "Playing Acoustic Lullabies",
+    "caption": "Soft melodies singing the day to rest.",
+    "prompt": "capybara on embroidered pouf playing wooden ukulele with music notes floating, scented candles in votives, palm plant, living room bookshelves, bold coloring book page, thick clean outlines, pure white background, no shading --ar 1:1 --stylize 50 --no color, shadow"
   },
   {
     "page": 29,
     "id": "mj_29_bedtime_routine",
     "title": "Brushing Teeth in Vintage Bathroom",
-    "prompt": "sleepy capybara in polka-dot pajamas on step stool brushing teeth before bathroom mirror, adult coloring book page, bold thick black outlines, crisp vector lines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, shading, gray"
+    "caption": "Ready for dreamland after a lovely day.",
+    "prompt": "sleepy capybara in pajamas on stool brushing teeth before oval mirror, clawfoot tub with yellow rubber duck, checkered mat, fluffy towels, toothbrush cup, adult coloring book page, bold thick black outlines, solid white background, no shading --ar 1:1 --stylize 50 --no color, shading"
   },
   {
     "page": 30,
     "id": "mj_30_cloud_bed",
-    "title": "Sleepy Night in the Cloud Bed",
-    "prompt": "sleeping capybara tucked in bed under cozy quilt hugging teddy bear, lamp on nightstand and moon outside window, bold line coloring book page, thick outlines, solid white background, flat 2D style, zero shading --ar 1:1 --stylize 50 --no color, gray, shading, gradient"
+    "title": "Sleepy Night in Cloud Bed",
+    "caption": "Rest peacefully, gentle friend. Tomorrow brings joy.",
+    "prompt": "sleeping capybara in bed under star-patterned duvet hugging teddy bear, nightstand with mushroom lamp, alarm clock, curtains framing moonlit starry window, bold line coloring book page, thick outlines, solid white background, zero shading --ar 1:1 --stylize 50 --no color, gray"
   }
 ]
