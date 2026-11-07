@@ -19,20 +19,16 @@ def create_transparent_png(input_path: Path, output_path: Path) -> bool:
     """Converts a black-and-white line art image into a transparent PNG with alpha channel."""
     try:
         with Image.open(input_path) as img:
-            rgba = img.convert("RGBA")
-            data = rgba.getdata()
+            # Grayscale converted to alpha mask: black pixels (0) -> opaque (255), white (255) -> transparent (0)
+            gray = img.convert("L")
+            # Invert so black lines become white mask (opaque 255)
+            alpha_mask = gray.point(lambda p: 255 if p < 180 else 0, mode="L")
+            # Black image with alpha mask
+            black_img = Image.new("RGBA", img.size, (0, 0, 0, 255))
+            black_img.putalpha(alpha_mask)
 
-            new_data = []
-            for item in data:
-                # If pixel is bright white, make it fully transparent
-                if item[0] > 200 and item[1] > 200 and item[2] > 200:
-                    new_data.append((255, 255, 255, 0))
-                else:
-                    new_data.append((0, 0, 0, 255))
-
-            rgba.putdata(new_data)
             output_path.parent.mkdir(parents=True, exist_ok=True)
-            rgba.save(output_path, "PNG")
+            black_img.save(output_path, "PNG")
             return True
     except Exception as exc:
         print(f"[ERROR] Transparent PNG conversion failed for {input_path.name}: {exc}")

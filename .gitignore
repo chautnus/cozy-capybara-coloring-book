@@ -5,3 +5,5 @@ dist/temp_etsy_bundle/
 env/
 .DS_Store
 Thumbs.db
+
+.vercel
