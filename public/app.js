@@ -64,7 +64,6 @@ function renderPages(filterChapter = "all") {
     : PAGES_DATA.filter(p => p.chapter.toString() === filterChapter);
 
   container.innerHTML = filtered.map(item => {
-    const hasImage = item.page <= 3;
     const imgSrc = `assets/processed/page_${String(item.page).padStart(2, '0')}_clean.png`;
     return `
     <article class="page-card" data-page="${item.page}">
@@ -72,10 +71,9 @@ function renderPages(filterChapter = "all") {
         <span class="page-num">Page ${String(item.page).padStart(2, '0')}</span>
         <span class="page-chapter">Chapter ${item.chapter}</span>
       </div>
-      ${hasImage ? `
       <div class="page-preview-frame">
-        <img src="${imgSrc}" alt="${item.title}" class="page-preview-img" loading="lazy" />
-      </div>` : ''}
+        <img src="${imgSrc}" alt="${item.title}" class="page-preview-img" loading="lazy" onerror="this.parentElement.style.display='none'" />
+      </div>
       <h3 class="page-title">${item.title}</h3>
       <p class="page-caption">"${item.caption}"</p>
       <div class="prompt-copy-btns">
