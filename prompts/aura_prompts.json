@@ -1,0 +1,67 @@
+[
+  {
+    "page": 1,
+    "id": "aura_01_whispering_dew",
+    "realm": "Dawn of Awakening",
+    "title": "The Whispering Dew",
+    "reflection_prompt": "Every new beginning begins in a moment of quiet stillness.",
+    "trigger_guide": {
+      "eyes": "Amber/Gold for awakening; Indigo for quiet sorrow; Emerald for peace",
+      "cheeks": "Coral blush for warmth; Pale lilac for winter solitude",
+      "aura": "Morning dew droplets (Sky blue / Golden sunlight) or tears of release"
+    },
+    "prompt": "Coloring book page, clean fine-line vector art, thick crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Ethereal fantasy portrait of Aeloria, a celestial nature guardian with an ambiguous serene open facial expression, contemplative multilayered open eyes, and gentle parted lips. Wearing a delicate botanical crown of fern fronds and morning dew. Flowing wavy hair cascading with suspended water droplets and floating concentric aura rings. Intricate adult coloring page with clear colorable zones."
+  },
+  {
+    "page": 2,
+    "id": "aura_02_petal_cocoon",
+    "realm": "Dawn of Awakening",
+    "title": "Petal Cocoon",
+    "reflection_prompt": "Inside every stillness, wings of freedom are quietly forming.",
+    "trigger_guide": {
+      "eyes": "Cyan for clarity; Crimson for inner fire",
+      "cheeks": "Soft peach for hope; Cool gray for detachment",
+      "aura": "Layers of blooming peony petals (Warm sunset tones or Mystic violets)"
+    },
+    "prompt": "Coloring book page, clean fine-line vector art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Close-up portrait of Aeloria emerging from a cocoon of giant blooming peony petals and wild ivy vines. Her face has an open, neutral, soulful expression with large detailed eyes and parted lips. Flowing hair intertwined with delicate flower buds and geometric sacred halo rings. Beautiful art therapy line art."
+  },
+  {
+    "page": 3,
+    "id": "aura_03_morning_wind",
+    "realm": "Dawn of Awakening",
+    "title": "Breath of Morning Wind",
+    "reflection_prompt": "Inhale peace, exhale the burdens that no longer belong to you.",
+    "trigger_guide": {
+      "eyes": "Teal for breathing space; Amber for determination",
+      "cheeks": "Rosy blush for vitality; Soft ivory for quiet calm",
+      "aura": "Swirling ribbon winds carrying maple leaves and swallowtail butterflies"
+    },
+    "prompt": "Coloring book page, clean fine-line vector art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Side-profile portrait of celestial spirit Aeloria with wind blowing through her long intricate braided hair. Swirling ribbons of atmospheric wind carry fluttering butterflies and maple leaves around her peaceful, open-expression face. Elegant flowing vector lines for mindful coloring."
+  },
+  {
+    "page": 4,
+    "id": "aura_04_gilded_horizon",
+    "realm": "Dawn of Awakening",
+    "title": "The Gilded Horizon",
+    "reflection_prompt": "Light always finds a way through the quietest crevices.",
+    "trigger_guide": {
+      "eyes": "Golden yellow for optimism; Sapphire blue for yearning",
+      "cheeks": "Warm apricot for confidence; Ash gray for weary patience",
+      "aura": "Geometric sunburst rays and floating dandelion seeds"
+    },
+    "prompt": "Coloring book page, clean fine-line vector art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Ethereal portrait of Aeloria gazing toward the horizon with a calm, transcendent expression. Surrounding her head is a sacred geometry sunburst halo with radiant beams, floating dandelion fluff, and delicate morning clouds. Clean detailed line art for adult art therapy."
+  },
+  {
+    "page": 5,
+    "id": "aura_05_sacred_spring",
+    "realm": "Dawn of Awakening",
+    "title": "Sacred Lily Spring",
+    "reflection_prompt": "Listen closely to the crystal clear truth within your own heart.",
+    "trigger_guide": {
+      "eyes": "Aquamarine for purity; Obsidian black for mystery",
+      "cheeks": "Blushing coral for emotional warmth; Porcelain white for stillness",
+      "aura": "Mirror water ripples, floating water lilies, and swimming beta fish"
+    },
+    "prompt": "Coloring book page, clean fine-line vector art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Celestial guardian Aeloria resting her chin near crystal clear pond water reflecting her open, mysterious expression. Giant water lilies and long flowing water ripples surround her shoulders, with patterned koi fins swirling gracefully. Therapeutic detailed linework."
+  }
+]
