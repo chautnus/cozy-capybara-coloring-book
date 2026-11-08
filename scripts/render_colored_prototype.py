@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
-Color the EXACT prototype line art page (assets/aura/processed/page_01_clean.png)
-in two contrasting emotional styles.
-Preserves 100% of the original black vector lines pixel-by-pixel,
-demonstrating how color palette and placement transform character emotion.
+High-Contrast Emotional Color Rendering on exact line art: assets/aura/processed/page_01_clean.png
+Dramatically pushes color theory, lighting, and placement to create unmistakable,
+extreme emotional polarity on the exact same drawing:
+- Style 1 (The Sun Guardian): Radiant Joy, Awakening, Golden Sunlight, Warm Glowing Blush.
+- Style 2 (The Weeping Spirit): Deep Melancholy, Catharsis, Dark Midnight Blue, Ghostly Pale Skin, Crying Tear Tracks.
+Preserves 100% of original black vector lines pixel-by-pixel.
 """
 
 import cv2
@@ -12,7 +14,7 @@ from PIL import Image
 from pathlib import Path
 
 
-def create_colored_styles(
+def render_high_contrast_styles(
     clean_line_path: Path = Path("assets/aura/processed/page_01_clean.png"),
     output_dir: Path = Path("assets/aura"),
 ):
@@ -25,27 +27,20 @@ def create_colored_styles(
     h, w = line_img.shape
     line_mask = line_img < 128  # True where black lines exist
 
-    # 2. Connected components for white regions
+    # 2. Connected components
     _, thresh = cv2.threshold(line_img, 127, 255, cv2.THRESH_BINARY)
     num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(thresh)
 
-    print(f"[INFO] Image shape: {w}x{h}, Connected white regions: {num_labels}")
-
-    # Specific key components identified
     FACE_LABEL = 330
     BODY_LABEL = 650
     BACKGROUND_LABEL = 1
 
-    # Eye labels
     LEFT_EYE_IRIS = [495, 498, 501, 504, 510]
     LEFT_EYE_SCLERA = [516, 522, 526, 534]
     RIGHT_EYE_IRIS = [496, 499, 502, 505, 509, 511, 514, 518]
     RIGHT_EYE_SCLERA = [507, 517, 525, 527, 529, 536]
-
-    # Lips
     LIP_LABELS = [597, 614]
 
-    # Categorize remaining components
     fern_labels = []
     droplet_labels = []
     hair_labels = []
@@ -61,135 +56,143 @@ def create_colored_styles(
         height = stats[i, cv2.CC_STAT_HEIGHT]
         aspect = max(width, height) / (min(width, height) + 1e-5)
 
-        # Droplets: small/medium oval shapes
-        if 200 <= a <= 9000 and 1.0 <= aspect <= 3.2 and not (980 < cx < 1600 and 700 < cy < 1500):
+        if 150 <= a <= 9000 and 1.0 <= aspect <= 3.2 and not (980 < cx < 1600 and 700 < cy < 1500):
             droplet_labels.append(i)
-        # Ferns: in upper crown or leafy shapes
-        elif (cy < 800 and (cx < 1000 or cx > 1580)) or (a > 5000 and cy < 700):
+        elif (cy < 820 and (cx < 1000 or cx > 1580)) or (a > 5000 and cy < 720):
             fern_labels.append(i)
-        # Aura outer bands
-        elif (cx < 400 or cx > 2180 or cy < 300) and a > 15000:
+        elif (cx < 420 or cx > 2160 or cy < 320) and a > 14000:
             aura_labels.append(i)
-        # Rest is hair / cascading locks
         else:
             hair_labels.append(i)
 
-    print(f"[INFO] Categorized: Ferns={len(fern_labels)}, Droplets={len(droplet_labels)}, Hair={len(hair_labels)}, Aura={len(aura_labels)}")
-
-    # =========================================================================
-    # STYLE 1: RADIANT HOPE, JOY & AWAKENING (Tươi sáng & Thức tỉnh)
-    # =========================================================================
-    print("[INFO] Rendering Style 1: Radiant Hope & Awakening...")
-    s1 = np.full((h, w, 3), 255, dtype=np.uint8)
-
-    # Background / Outer Aura: Warm sunrise peach & golden yellow
-    s1[labels == BACKGROUND_LABEL] = [255, 248, 230]  # Very soft golden cream
-    for lbl in aura_labels:
-        s1[labels == lbl] = [255, 230, 180]  # Golden sunrise amber
-
-    # Body / Garment: Soft radiant ivory peach
-    s1[labels == BODY_LABEL] = [255, 238, 222]
-
-    # Hair: Warm chestnut / honey-caramel brown
-    for lbl in hair_labels:
-        s1[labels == lbl] = [180, 130, 95]
-
-    # Fern Crown: Vibrant fresh emerald & jade green
-    for lbl in fern_labels:
-        s1[labels == lbl] = [105, 185, 95]
-
-    # Water Droplets: Sparkling Cyan & Aquamarine morning dew
-    for lbl in droplet_labels:
-        s1[labels == lbl] = [100, 230, 255]
-
-    # Face Skin: Warm luminous porcelain
-    s1[labels == FACE_LABEL] = [255, 242, 232]
-
-    # Add radiant cheek blush onto face
-    # Left cheek: (1110, 1200), Right cheek: (1480, 1200)
     Y, X = np.ogrid[:h, :w]
     face_mask = (labels == FACE_LABEL)
+
+    # =========================================================================
+    # STYLE 1: RADIANT SUNLIGHT, JOY & AWAKENING (Cao trào rạng rỡ & Ánh sáng)
+    # =========================================================================
+    print("[INFO] Rendering Dramatic Style 1: Radiant Sun & Joy...")
+    s1 = np.full((h, w, 3), 255, dtype=np.uint8)
+
+    # High-Key Golden Background
+    s1[labels == BACKGROUND_LABEL] = [255, 243, 205]  # Warm glowing sunny cream
+    for lbl in aura_labels:
+        s1[labels == lbl] = [255, 200, 70]   # Rich golden amber sun halo
+
+    # Draped Body: Bright warm apricot silk
+    s1[labels == BODY_LABEL] = [255, 218, 185]
+
+    # Hair: Vibrant honey golden brown
+    for lbl in hair_labels:
+        s1[labels == lbl] = [190, 115, 55]
+
+    # Fern Crown: Lush tropical emerald green
+    for lbl in fern_labels:
+        s1[labels == lbl] = [76, 175, 80]
+
+    # Dew Droplets: Glistening electric turquoise
+    for lbl in droplet_labels:
+        s1[labels == lbl] = [0, 230, 255]
+
+    # Face Skin: Warm luminous golden peach
+    s1[labels == FACE_LABEL] = [255, 235, 215]
+
+    # Cheeks & Nose: Vibrant coral blush of life and excitement
     for cx, cy in [(1110, 1200), (1480, 1200)]:
         dist = np.sqrt((X - cx)**2 + (Y - cy)**2)
-        blush_intensity = np.clip(1.0 - (dist / 140.0), 0, 1) ** 2
-        blush_mask = face_mask & (blush_intensity > 0)
-        # Blend soft warm coral pink [255, 145, 140]
-        alpha = blush_intensity[blush_mask, None] * 0.55
-        target_color = np.array([255, 140, 135], dtype=np.float32)
-        s1[blush_mask] = (s1[blush_mask] * (1.0 - alpha) + target_color * alpha).astype(np.uint8)
+        blush_val = np.clip(1.0 - (dist / 170.0), 0, 1) ** 1.8
+        b_mask = face_mask & (blush_val > 0)
+        alpha = blush_val[b_mask, None] * 0.70
+        s1[b_mask] = (s1[b_mask] * (1.0 - alpha) + np.array([255, 105, 115]) * alpha).astype(np.uint8)
 
-    # Eyes: Sparkling warm amber & gold
+    # Nose tip warmth
+    dist_nose = np.sqrt((X - 1295)**2 + ((Y - 1230)*1.5)**2)
+    nose_val = np.clip(1.0 - (dist_nose / 75.0), 0, 1) ** 2
+    n_mask = face_mask & (nose_val > 0)
+    s1[n_mask] = (s1[n_mask] * (1.0 - nose_val[n_mask, None]*0.45) + np.array([255, 120, 110]) * (nose_val[n_mask, None]*0.45)).astype(np.uint8)
+
+    # Eyes: Intense burning amber & gold (Determined, joyful, alive)
     for lbl in LEFT_EYE_SCLERA + RIGHT_EYE_SCLERA:
         s1[labels == lbl] = [255, 255, 255]
     for lbl in LEFT_EYE_IRIS + RIGHT_EYE_IRIS:
-        s1[labels == lbl] = [245, 175, 45]  # Glowing amber gold
+        s1[labels == lbl] = [255, 170, 0]  # Vivid golden flame amber
 
-    # Lips: Warm natural coral rose
+    # Lips: Bright blooming cherry rose
     for lbl in LIP_LABELS:
-        s1[labels == lbl] = [235, 120, 125]
+        s1[labels == lbl] = [240, 75, 95]
 
-    # OVERLAY EXACT 100% ORIGINAL BLACK VECTOR LINES
+    # Overlay exact 100% original black lines
     s1[line_mask] = [0, 0, 0]
 
     # =========================================================================
-    # STYLE 2: DEEP MELANCHOLY, SOLITUDE & CATHARSIS (U sầu & Chiều sâu nội tâm)
+    # STYLE 2: DEEP MELANCHOLY, GRIEF & WEEPING TEARS (Bi kịch, U uất, Nước mắt)
     # =========================================================================
-    print("[INFO] Rendering Style 2: Deep Melancholy & Catharsis...")
+    print("[INFO] Rendering Dramatic Style 2: Deep Melancholy & Weeping Tears...")
     s2 = np.full((h, w, 3), 255, dtype=np.uint8)
 
-    # Background / Outer Aura: Twilight deep amethyst & stormy navy
-    s2[labels == BACKGROUND_LABEL] = [225, 228, 240]  # Cold twilight mist
+    # Low-Key Dark Midnight Twilight Background (Dark contrast makes face look haunted)
+    s2[labels == BACKGROUND_LABEL] = [18, 22, 42]   # Deep midnight navy
     for lbl in aura_labels:
-        s2[labels == lbl] = [170, 175, 215]  # Stormy amethyst purple
+        s2[labels == lbl] = [45, 32, 78]    # Dark stormy amethyst purple
 
-    # Body / Garment: Midnight slate navy
-    s2[labels == BODY_LABEL] = [110, 125, 160]
+    # Draped Body: Dark midnight shroud
+    s2[labels == BODY_LABEL] = [38, 48, 75]
 
-    # Hair: Smoky charcoal ash blue
+    # Hair: Inky blue-black / cold charcoal
     for lbl in hair_labels:
-        s2[labels == lbl] = [90, 100, 120]
+        s2[labels == lbl] = [30, 36, 50]
 
-    # Fern Crown: Withered winter sage & frosty pine
+    # Fern Crown: Withered dying frosty blue / ash grey
     for lbl in fern_labels:
-        s2[labels == lbl] = [120, 145, 150]
+        s2[labels == lbl] = [68, 85, 95]
 
-    # Water Droplets: Poignant deep cobalt tears of release
+    # Droplets: Dark heavy tears of despair (Electric deep cobalt & indigo)
     for lbl in droplet_labels:
-        s2[labels == lbl] = [70, 100, 220]
+        s2[labels == lbl] = [35, 90, 240]
 
-    # Face Skin: Cool pale porcelain with faint lavender undertone
-    s2[labels == FACE_LABEL] = [238, 238, 248]
+    # Face Skin: Ghostly pale moonlit porcelain with cold blue undertone
+    s2[labels == FACE_LABEL] = [220, 224, 238]
 
-    # Add sorrowful smoky lavender shadows under eyes & hollows of cheeks
-    # Eye shadows around (1110, 1070) and (1486, 1070)
-    for cx, cy in [(1110, 1080), (1486, 1080)]:
-        dist = np.sqrt((X - cx)**2 + ((Y - cy)*1.8)**2)
-        shadow_intensity = np.clip(1.0 - (dist / 110.0), 0, 1) ** 2
-        shadow_mask = face_mask & (shadow_intensity > 0)
-        alpha = shadow_intensity[shadow_mask, None] * 0.45
-        target_color = np.array([160, 150, 195], dtype=np.float32)  # Smoky violet
-        s2[shadow_mask] = (s2[shadow_mask] * (1.0 - alpha) + target_color * alpha).astype(np.uint8)
+    # Dark bruised violet eye bags & tear pooling under eyes
+    for cx, cy in [(1110, 1075), (1486, 1075)]:
+        dist = np.sqrt(((X - cx)*0.85)**2 + ((Y - cy)*1.8)**2)
+        bag_val = np.clip(1.0 - (dist / 120.0), 0, 1) ** 1.5
+        bag_mask = face_mask & (bag_val > 0)
+        alpha = bag_val[bag_mask, None] * 0.65
+        s2[bag_mask] = (s2[bag_mask] * (1.0 - alpha) + np.array([85, 65, 125]) * alpha).astype(np.uint8)
 
-    # Cool subtle cheek contouring
-    for cx, cy in [(1060, 1260), (1530, 1260)]:
-        dist = np.sqrt((X - cx)**2 + (Y - cy)**2)
-        contour_intensity = np.clip(1.0 - (dist / 150.0), 0, 1) ** 2
-        contour_mask = face_mask & (contour_intensity > 0)
-        alpha = contour_intensity[contour_mask, None] * 0.30
-        target_color = np.array([185, 185, 215], dtype=np.float32)
-        s2[contour_mask] = (s2[contour_mask] * (1.0 - alpha) + target_color * alpha).astype(np.uint8)
+    # Visible weeping tear trails streaming down from eyes to jawline
+    # Left tear track: x=1110, y from 1070 to 1420
+    # Right tear track: x=1486, y from 1070 to 1420
+    for tear_x in [1110, 1486]:
+        for y_pt in range(1070, 1450, 4):
+            x_offset = int(np.sin((y_pt - 1070) * 0.04) * 8)
+            dist_t = np.sqrt((X - (tear_x + x_offset))**2 + ((Y - y_pt)*0.4)**2)
+            t_val = np.clip(1.0 - (dist_t / 18.0), 0, 1) ** 1.5
+            t_mask = face_mask & (t_val > 0)
+            if np.any(t_mask):
+                alpha_t = t_val[t_mask, None] * 0.75
+                s2[t_mask] = (s2[t_mask] * (1.0 - alpha_t) + np.array([45, 115, 255]) * alpha_t).astype(np.uint8)
 
-    # Eyes: Deep melancholic sapphire & slate blue
+    # Hollows of cheeks: Cold purple-grey depression shadow
+    for cx, cy in [(1050, 1280), (1540, 1280)]:
+        dist_c = np.sqrt((X - cx)**2 + (Y - cy)**2)
+        c_val = np.clip(1.0 - (dist_c / 160.0), 0, 1) ** 2
+        c_mask = face_mask & (c_val > 0)
+        alpha_c = c_val[c_mask, None] * 0.40
+        s2[c_mask] = (s2[c_mask] * (1.0 - alpha_c) + np.array([110, 115, 150]) * alpha_c).astype(np.uint8)
+
+    # Eyes: Cold sorrowful slate-sapphire (Drowned in grief)
     for lbl in LEFT_EYE_SCLERA + RIGHT_EYE_SCLERA:
-        s2[labels == lbl] = [220, 225, 240]  # Cool tinted sclera
+        s2[labels == lbl] = [185, 195, 215]  # Bloodshot cool grey
     for lbl in LEFT_EYE_IRIS + RIGHT_EYE_IRIS:
-        s2[labels == lbl] = [35, 80, 185]  # Deep sad sapphire blue
+        s2[labels == lbl] = [15, 55, 160]   # Drowned deep navy
 
-    # Lips: Muted berry / pale lavender
+    # Lips: Cold pale bruised lavender / desaturated mauve
     for lbl in LIP_LABELS:
-        s2[labels == lbl] = [165, 140, 175]
+        s2[labels == lbl] = [135, 115, 150]
 
-    # OVERLAY EXACT 100% ORIGINAL BLACK VECTOR LINES
+    # Overlay exact 100% original black lines
     s2[line_mask] = [0, 0, 0]
 
     # 4. Save both exact colored variants
@@ -199,10 +202,21 @@ def create_colored_styles(
     Image.fromarray(s1).save(out_s1, dpi=(300, 300))
     Image.fromarray(s2).save(out_s2, dpi=(300, 300))
 
-    print(f"[SUCCESS] Saved exact colored Style 1: {out_s1}")
-    print(f"[SUCCESS] Saved exact colored Style 2: {out_s2}")
+    # Also generate high-resolution side-by-side comparison strip
+    p_clean = Image.open(str(clean_line_path)).convert('RGB')
+    im1 = p_clean.resize((1000, 1014), Image.Resampling.LANCZOS)
+    im2 = Image.fromarray(s1).resize((1000, 1014), Image.Resampling.LANCZOS)
+    im3 = Image.fromarray(s2).resize((1000, 1014), Image.Resampling.LANCZOS)
+
+    combined = Image.new('RGB', (1000 * 3 + 40, 1014 + 80), color=(25, 25, 30))
+    combined.paste(im1, (10, 60))
+    combined.paste(im2, (1000 + 20, 60))
+    combined.paste(im3, (1000 * 2 + 30, 60))
+
+    combined.save(output_dir / "comparison_side_by_side.jpg", quality=95)
+    print(f"[SUCCESS] High-contrast comparison generated successfully!")
     return True
 
 
 if __name__ == "__main__":
-    create_colored_styles()
+    render_high_contrast_styles()
