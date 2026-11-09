@@ -1,5 +1,6 @@
-# ĐẶC TẢ 30 TÁC PHẨM & KỊCH BẢN NỘI TÂM: AURA — THE EMOTIONAL MIRROR
-## An Art Therapy Coloring Book for Mindful Reflection & Soul Healing
+# [ĐÃ HỦY BỎ / CANCELLED BY USER] ĐẶC TẢ 30 TÁC PHẨM: AURA — THE EMOTIONAL MIRROR
+> **LƯU Ý:** Dự án AURA đã bị người dùng hủy bỏ hoàn toàn.
+> **Book 2 chính thức hiện tại:** *Autumn in Canada: A Scenic Journey Across Provinces & Territories* (Thiên nhiên & Danh lam thắng cảnh 30 cảnh - Xem `docs/07_canada_autumn_roadmap.md`).
 
 ---
 

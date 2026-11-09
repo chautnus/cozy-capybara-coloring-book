@@ -1,9 +1,6 @@
 feature: aura-emotional-mirror
-feature-name: AURA - The Emotional Mirror Art Therapy Coloring Book
+feature-name: AURA - The Emotional Mirror (CANCELLED / ABANDONED BY USER)
 scope: feature
-started: 2026-11-08
-
-elicit: done | 2026-11-08
-prd:    done | 2026-11-08 | v1.0 | docs/05_emotional_coloring_series_roadmap.md
-arch:   done | 2026-11-08 | ADR-002
-tasks:  pending
+status: cancelled
+reason: User abandoned aura concept; replaced by Book 2 (Autumn in Canada Scenic Landscapes & Nature)
+cancelled_date: 2026-11-09

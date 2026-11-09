@@ -70,7 +70,7 @@ let activeBook = "canada"; // Default to newest release
 
 const BOOK_CONFIGS = {
   canada: {
-    brandBadge: "NEW RELEASE • KDP & ETSY",
+    brandBadge: "BOOK 2 • SCENIC LANDSCAPES & NATURE",
     brandTitle: "Autumn in Canada",
     badges: [
       '<span class="badge badge-accent">10 Provinces & 3 Territories</span>',
@@ -109,7 +109,7 @@ const BOOK_CONFIGS = {
     ]
   },
   capybara: {
-    brandBadge: "BOOKTOK BESTSELLER PIPELINE",
+    brandBadge: "BOOK 1 • COZY CAPYBARA STORY",
     brandTitle: "Barnaby's Peaceful Days",
     badges: [
       '<span class="badge badge-accent">Trending BookTok Niche</span>',
