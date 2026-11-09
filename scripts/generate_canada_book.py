@@ -140,10 +140,10 @@ def generate_single_page(page_meta: dict, preferred_email: str = "ad01.lamlumber
     
     # Priority order across all 6 accounts with automatic retry on burst limit
     accounts_pool = [
-        "vut08348@gmail.com",
         "ad01.lamlumber@gmail.com",
-        "lynnphan2017@gmail.com",
         "loch7444@gmail.com",
+        "lynnphan2017@gmail.com",
+        "vut08348@gmail.com",
         "chautnus@gmail.com",
         "dinhthithibwkg58231@gmail.com"
     ]
