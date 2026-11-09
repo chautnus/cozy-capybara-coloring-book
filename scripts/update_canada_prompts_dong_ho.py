@@ -1,0 +1,456 @@
+#!/usr/bin/env python3
+"""
+Update prompts/canada_prompts.json with Dong Ho Layered Woodblock specifications:
+- Sharp, bold, clean woodcut vector line art
+- Multi-tiered foliage canopy layers (tán lá phân tầng mộc bản) for sequential color washing
+- Flowing rhythmic water strata bands (sóng nước xếp lớp mộc bản)
+- Chiseled woodcut facets for landforms, rocks, and heritage architecture
+- Square 1:1 aspect ratio composition, full square canvas, zero micro-clutter
+- Sophisticated adult aesthetic, strictly NOT childish, NOT cartoonish blobs
+"""
+
+import json
+from pathlib import Path
+
+SCENES_META = [
+    {
+        "page_number": 1,
+        "region": "Central Canada",
+        "province": "Ontario",
+        "display_title": "Algonquin Provincial Park",
+        "display_province": "Ontario",
+        "title": "Algonquin Lake Canoe & Maple Glow",
+        "subject": (
+            "Algonquin Provincial Park in autumn. In the foreground, an elegant traditional Canadian cedar canoe "
+            "rests on the quiet lake shore with a wooden paddle. The autumn sugar maple trees are stylized into "
+            "rhythmic multi-tiered woodblock canopy layers for layered color washing. The serene lake water is "
+            "divided into flowing rhythmic woodcut strata bands. In the background, gentle rolling hills with clean chiseled woodcut facets."
+        )
+    },
+    {
+        "page_number": 2,
+        "region": "Central Canada",
+        "province": "Ontario",
+        "display_title": "Agawa Canyon Scenic Railway",
+        "display_province": "Northern Ontario",
+        "title": "Agawa Canyon Autumn Tour Train",
+        "subject": (
+            "Agawa Canyon in Northern Ontario. A vintage passenger scenic train curves along railway tracks on the canyon floor "
+            "beside a river with rhythmic water strata. Towering vertical granite canyon walls rise on both sides with chiseled facets, "
+            "crowned with golden birches and maples stylized into rhythmic multi-tiered woodcut canopy layers."
+        )
+    },
+    {
+        "page_number": 3,
+        "region": "Central Canada",
+        "province": "Ontario",
+        "display_title": "Niagara Horseshoe Falls",
+        "display_province": "Ontario",
+        "title": "Niagara Horseshoe Falls Panorama",
+        "subject": (
+            "Grand panoramic view of Niagara Horseshoe Falls framed by autumn foliage. The roaring curved waterfall has powerful cascading "
+            "tiered water bands and stylized mist crests. In the foreground, a curved historic stone promenade railing with chiseled facets, "
+            "framed by mature maple tree branches with layered woodblock leaf canopies."
+        )
+    },
+    {
+        "page_number": 4,
+        "region": "Central Canada",
+        "province": "Ontario",
+        "display_title": "Rideau Canal & Market",
+        "display_province": "Ottawa, Ontario",
+        "title": "Rideau Canal Historic Waterway",
+        "subject": (
+            "Scenic historic view along the Rideau Canal in Ottawa in autumn. A pleasure tour boat glides through calm water strata. "
+            "Along the canal bank, historic stone lock walls and parliamentary architecture with chiseled woodcut facets are framed "
+            "by fiery red maple trees stylized into rhythmic tiered canopy planes."
+        )
+    },
+    {
+        "page_number": 5,
+        "region": "Central Canada",
+        "province": "Quebec",
+        "display_title": "Château Frontenac & Old Quebec",
+        "display_province": "Quebec",
+        "title": "Château Frontenac & Historic Old Quebec",
+        "subject": (
+            "The iconic Château Frontenac castle rising majestically above Old Quebec in peak autumn. The historic castle features "
+            "chiseled woodcut copper turrets and stone walls. In the foreground, a cobblestone terrace with scattered maple leaves "
+            "and a vintage horse-drawn caleche carriage, framed by golden maple tree branches in rhythmic tiered planes."
+        )
+    },
+    {
+        "page_number": 6,
+        "region": "Central Canada",
+        "province": "Quebec",
+        "display_title": "Mont-Tremblant Alpine Village",
+        "display_province": "Quebec",
+        "title": "Mont-Tremblant Alpine Resort Village",
+        "subject": (
+            "Storybook pedestrian alpine resort village of Mont-Tremblant in autumn. A cobblestone village square with a vintage clock tower "
+            "and colorful timbered shopfronts with chiseled facets. In the background, steep mountain slopes covered in fiery red maple forest "
+            "stylized into rhythmic tiered canopy bands, with a scenic gondola cable line ascending toward the summit."
+        )
+    },
+    {
+        "page_number": 7,
+        "region": "Central Canada",
+        "province": "Quebec",
+        "display_title": "Montmorency Falls & Bridge",
+        "display_province": "Quebec",
+        "title": "Montmorency Falls & Suspension Bridge",
+        "subject": (
+            "Dramatic plunge of Montmorency Falls in Quebec, higher than Niagara. A pedestrian suspension bridge spans the roaring waterfall crest. "
+            "Water drops in powerful stylized vertical tiered bands into a foaming basin below, flanked by rugged rocky cliff facets "
+            "and flaming red maple forest layers in rhythmic woodcut tiers."
+        )
+    },
+    {
+        "page_number": 8,
+        "region": "Central Canada",
+        "province": "Quebec",
+        "display_title": "Jacques-Cartier Glacial Valley",
+        "display_province": "Quebec",
+        "title": "Jacques-Cartier Glacial Valley",
+        "subject": (
+            "Monumental U-shaped glacial valley of Jacques-Cartier National Park. A winding river snakes through the center with flowing "
+            "water strata bands. The steep valley mountain walls are blanketed in dense maple and birch forests stylized into elegant "
+            "overlapping tiered canopy planes leading to rolling highland horizons."
+        )
+    },
+    {
+        "page_number": 9,
+        "region": "Western Canada",
+        "province": "Alberta",
+        "display_title": "Moraine Lake & Ten Peaks",
+        "display_province": "Banff, Alberta",
+        "title": "Moraine Lake & Valley of the Ten Peaks",
+        "subject": (
+            "Iconic view of Moraine Lake from the natural Rockpile in Banff National Park. Jagged snow-dusted summits of the Ten Peaks "
+            "with chiseled woodcut facets tower majestically in the background. In the foreground, large smooth granite boulders with clear facets "
+            "overlook the glassy glacier lake composed of flowing horizontal water strata bands. Clean alpine pines in layered tiers."
+        )
+    },
+    {
+        "page_number": 10,
+        "region": "Western Canada",
+        "province": "Alberta",
+        "display_title": "Icefields Parkway Wildlife",
+        "display_province": "Alberta",
+        "title": "Icefields Parkway Bull Elk & Peaks",
+        "subject": (
+            "Scenic wildlife landscape along the Icefields Parkway in autumn. In the foreground, a magnificent bull elk with sweeping antlers "
+            "stands proudly in a golden alpine meadow. In the background, winding highway ribbon and towering snow-capped Rocky Mountain peaks "
+            "with bold chiseled facets and tiered golden larch and evergreen pine forest bands."
+        )
+    },
+    {
+        "page_number": 11,
+        "region": "Western Canada",
+        "province": "Alberta",
+        "display_title": "Dinosaur Badlands Hoodoos",
+        "display_province": "Alberta",
+        "title": "Dinosaur Provincial Park Hoodoos",
+        "subject": (
+            "Bizarre mushroom-shaped sandstone Hoodoos in Dinosaur Provincial Park. The giant hoodoo rock pillars feature bold stratified "
+            "horizontal sedimentary layers with chiseled facets. The desert coulee canyon floor is dotted with sagebrush and golden prairie grass, "
+            "under a sweeping autumn sky with stylized cloud ribbons."
+        )
+    },
+    {
+        "page_number": 12,
+        "region": "Western Canada",
+        "province": "Alberta",
+        "display_title": "Banff Upper Hot Springs",
+        "display_province": "Banff, Alberta",
+        "title": "Banff Upper Hot Springs Alpine Vista",
+        "subject": (
+            "Steaming open-air mineral hot pool at Banff Upper Hot Springs. Stylized gentle steam ribbons drift into the cool autumn air. "
+            "Surrounding the pool is a heritage stone terrace with chiseled facets. Beyond, towering evergreen pine trees in tiered forest bands "
+            "dusted with first autumn snow, overlooking majestic Mount Rundle in the distance."
+        )
+    },
+    {
+        "page_number": 13,
+        "region": "Western Canada",
+        "province": "British Columbia",
+        "display_title": "Okanagan Valley Vineyards",
+        "display_province": "British Columbia",
+        "title": "Okanagan Valley Terraced Vineyards",
+        "subject": (
+            "Terraced hillside vineyards of the Okanagan Valley in autumn harvest. Contoured geometric rows of grapevines curve gracefully "
+            "down the rolling slopes with stylized grape leaf clusters. In the background, the deep blue Okanagan Lake with flowing water strata, "
+            "a rustic timber winery barn, and gentle sunlit mountains under a warm sky."
+        )
+    },
+    {
+        "page_number": 14,
+        "region": "Western Canada",
+        "province": "British Columbia",
+        "display_title": "Lynn Canyon Suspension Bridge",
+        "display_province": "North Vancouver, BC",
+        "title": "Lynn Canyon Suspension Footbridge",
+        "subject": (
+            "Wooden pedestrian suspension footbridge swaying high above Lynn Canyon gorge in North Vancouver. Rushing canyon river with tiered "
+            "waterfall steps flows below. Towering ancient western red cedar and Douglas fir trees frame the gorge in majestic tiered canopy layers, "
+            "with stylized hanging moss and broad fern fronds in the foreground."
+        )
+    },
+    {
+        "page_number": 15,
+        "region": "Western Canada",
+        "province": "British Columbia",
+        "display_title": "Tofino Pacific Coast",
+        "display_province": "Vancouver Island, BC",
+        "title": "Tofino Pacific Coast & Driftwood",
+        "subject": (
+            "Wild coastal landscape of Tofino on Vancouver Island. In the foreground, massive smooth cedar driftwood logs rest on the broad sandy beach. "
+            "Rhythmic stylized ocean breakers roll in with sweeping crested wave bands. In the background, misty offshore rocky sea stacks with chiseled facets "
+            "and a dense temperate rainforest ridge of tall pines in tiered silhouettes."
+        )
+    },
+    {
+        "page_number": 16,
+        "region": "Western Canada",
+        "province": "British Columbia",
+        "display_title": "Natural Bridge & Emerald Lake",
+        "display_province": "Yoho National Park, BC",
+        "title": "Natural Stone Bridge in Yoho",
+        "subject": (
+            "Ancient limestone natural rock bridge carved by raging glacier waters in Yoho National Park. The sculptural rock arch features bold chiseled "
+            "facets with powerful water torrents surging through the gorge below in flowing wave strata. In the background, calm turquoise waters "
+            "of Emerald Lake framed by tiered spruce and golden larch forests and massive alpine peaks."
+        )
+    },
+    {
+        "page_number": 17,
+        "region": "Atlantic Canada",
+        "province": "Nova Scotia",
+        "display_title": "The Cabot Trail Ocean Bluffs",
+        "display_province": "Cape Breton, Nova Scotia",
+        "title": "The Cabot Trail Coastal Highway",
+        "subject": (
+            "Spectacular sweeping coastal highway of the Cabot Trail winding along steep headland cliffs of Cape Breton Highlands. Below, the vast "
+            "Atlantic Ocean rolls with stylized woodcut wave bands. The towering coastal mountains are blanketed in fiery red, orange, and golden maple forest "
+            "stylized into rhythmic multi-tiered canopy layers."
+        )
+    },
+    {
+        "page_number": 18,
+        "region": "Atlantic Canada",
+        "province": "Nova Scotia",
+        "display_title": "Peggy's Cove Lighthouse",
+        "display_province": "Nova Scotia",
+        "title": "Peggy's Point Lighthouse & Granite",
+        "subject": (
+            "Classic Peggy's Cove octagonal wooden lighthouse standing proudly on giant smooth glacial granite boulders with rounded woodcut contours. "
+            "Rolling Atlantic ocean breakers crash against the rocky headlands in rhythmic wave strata. In the distance, a small coastal fishing village "
+            "with wooden cottages and red dories moored under breezy autumn clouds."
+        )
+    },
+    {
+        "page_number": 19,
+        "region": "Atlantic Canada",
+        "province": "New Brunswick",
+        "display_title": "Hopewell Rocks Flowerpots",
+        "display_province": "Bay of Fundy, NB",
+        "title": "Hopewell Rocks Flowerpot Sea Stacks",
+        "subject": (
+            "Monumental flowerpot sandstone sea stacks at Hopewell Rocks on the Bay of Fundy. At low tide, the massive curved rock pillars stand "
+            "on the exposed red mud sea floor with horizontal sedimentary strata and chiseled facets, crowned with clusters of hardy green pines in tiered canopy layers. "
+            "Distant tidal water channels reflect the autumn sky."
+        )
+    },
+    {
+        "page_number": 20,
+        "region": "Atlantic Canada",
+        "province": "New Brunswick",
+        "display_title": "Dickson Falls Forest Brook",
+        "display_province": "Fundy National Park, NB",
+        "title": "Dickson Falls Cascading Gorge",
+        "subject": (
+            "Lush secluded forest cascade of Dickson Falls in Fundy National Park. A stepped brook tumbles down smooth mossy boulders in rhythmic "
+            "flowing water strata bands. A wooden viewing boardwalk trail winds beside the stream. The deep gorge is enveloped by dense sugar maples, "
+            "yellow birches, and emerald ferns in rhythmic multi-tiered woodcut canopy planes."
+        )
+    },
+    {
+        "page_number": 21,
+        "region": "Atlantic Canada",
+        "province": "Prince Edward Island",
+        "display_title": "Cavendish Red Sandstone Cliffs",
+        "display_province": "Prince Edward Island",
+        "title": "Cavendish Red Cliffs & Ocean Dunes",
+        "subject": (
+            "Vivid coastal landscape of Cavendish Beach on Prince Edward Island. In the midground, dramatic red sandstone sea cliffs with layered "
+            "horizontal sedimentary strata meet the ocean. Rolling sand dunes in the foreground are carpeted in golden marram grass clumps. "
+            "Gentle Atlantic ocean waves with flowing wave strata under an open coastal sky."
+        )
+    },
+    {
+        "page_number": 22,
+        "region": "Atlantic Canada",
+        "province": "Prince Edward Island",
+        "display_title": "Point Prim Historic Lighthouse",
+        "display_province": "Prince Edward Island",
+        "title": "Point Prim Round Brick Lighthouse",
+        "subject": (
+            "Historic Point Prim Lighthouse, the oldest lighthouse on Prince Edward Island built in 1845. A unique circular brick tower with a lantern room "
+            "perched on a breezy grassy headland with chiseled facets. A classic white picket fence and coastal wildflowers line the foreground. "
+            "Gentle ocean bay water strata and distant sailing dories under autumn clouds."
+        )
+    },
+    {
+        "page_number": 23,
+        "region": "Atlantic Canada",
+        "province": "Newfoundland",
+        "display_title": "Western Brook Pond Fjord",
+        "display_province": "Gros Morne, Newfoundland",
+        "title": "Western Brook Pond Glacier Fjord",
+        "subject": (
+            "Towering vertical granite cliffs of Western Brook Pond glacier gorge in Gros Morne National Park. A scenic tour boat glides through "
+            "the deep inland freshwater fjord water strata. Waterfalls plunge down two-thousand-foot rock faces with chiseled facets, "
+            "flanked by patches of hardy autumn birch and mountain ash in rhythmic tiered canopy planes."
+        )
+    },
+    {
+        "page_number": 24,
+        "region": "Atlantic Canada",
+        "province": "Newfoundland",
+        "display_title": "Quidi Vidi Fishing Village",
+        "display_province": "St. John's, Newfoundland",
+        "title": "Quidi Vidi Historic Outport Stages",
+        "subject": (
+            "Picturesque historic fishing outport of Quidi Vidi near St. John's. Traditional wooden fishing stages and sheds on stilts with chiseled facets "
+            "line the sheltered rocky harbor, with small wooden dories tied to docks on calm water strata. In the background, rugged coastal cliffs rise "
+            "with autumn scrub and yellow trees in rhythmic tiered woodcut layers."
+        )
+    },
+    {
+        "page_number": 25,
+        "region": "Atlantic Canada",
+        "province": "Newfoundland",
+        "display_title": "Cape Spear Easternmost Point",
+        "display_province": "Newfoundland",
+        "title": "Cape Spear Lighthouse & Continental Cape",
+        "subject": (
+            "Historic 1836 Cape Spear Lighthouse standing on a dramatic windswept promontory at the easternmost point of North America. The sturdy square "
+            "wooden lighthouse features a central domed beacon. Below, powerful Atlantic ocean breakers crash against dark rocky headlands with chiseled facets "
+            "in rhythmic wave strata. A wooden boardwalk trail winds across coastal heathland."
+        )
+    },
+    {
+        "page_number": 26,
+        "region": "The Prairies",
+        "province": "Manitoba",
+        "display_title": "Riding Mountain Ominik Marsh",
+        "display_province": "Manitoba",
+        "title": "Riding Mountain Marsh Boardwalk",
+        "subject": (
+            "Floating wooden boardwalk trail winding gracefully in an S-curve through Ominik Marsh in Riding Mountain National Park. Broad cattails and "
+            "bulrushes border the path with floating water lily pads on calm water strata. In the background, a dense golden forest canopy of trembling aspens "
+            "and paper birches stylized into rhythmic multi-tiered woodcut canopy planes under a vast prairie sky."
+        )
+    },
+    {
+        "page_number": 27,
+        "region": "The Prairies",
+        "province": "Manitoba",
+        "display_title": "Churchill Polar Bears & Aurora",
+        "display_province": "Northern Manitoba",
+        "title": "Polar Bears & Autumn Aurora Borealis",
+        "subject": (
+            "Wild autumn subarctic landscape in Churchill, Manitoba. A magnificent polar bear mother and her playful cub walk across fiery red and ochre "
+            "tundra shrub plains with chiseled low ridges beside icy Hudson Bay water strata. Above them, stylized flowing ribbon arches of the Aurora Borealis "
+            "(Northern Lights) dance gracefully across the night sky alongside bright stars."
+        )
+    },
+    {
+        "page_number": 28,
+        "region": "The Prairies",
+        "province": "Saskatchewan",
+        "display_title": "Prairie Grain Elevators",
+        "display_province": "Saskatchewan",
+        "title": "Historic Wooden Grain Elevators & Wheat",
+        "subject": (
+            "Classic rural Canadian prairie icon in Saskatchewan. A row of towering historic wooden grain elevators with chiseled geometric facets "
+            "stands beside railway tracks under a vast prairie sky. In the foreground, an endless field of ripe golden wheat with a vintage tractor resting "
+            "near large round hay bales, with gentle rolling horizons in rhythmic horizontal strata."
+        )
+    },
+    {
+        "page_number": 29,
+        "region": "The North",
+        "province": "Yukon Territory",
+        "display_title": "Tombstone Mountain & Tundra",
+        "display_province": "Yukon Territory",
+        "title": "Crimson Tundra & Tombstone Mountain",
+        "subject": (
+            "Dramatic subarctic wilderness of Tombstone Territorial Park along the Dempster Highway. In the foreground, low-lying crimson tundra shrubs "
+            "and moss hummocks form a rich textured carpet with wandering stream strata channels. In the background, the iconic razor-sharp black granite spire "
+            "of Tombstone Mountain rises dramatically with fresh dusting of snow on its chiseled facets."
+        )
+    },
+    {
+        "page_number": 30,
+        "region": "The North",
+        "province": "Northwest Territories",
+        "display_title": "Alexandra Falls Gorge",
+        "display_province": "Northwest Territories",
+        "title": "Alexandra Falls on the Hay River",
+        "subject": (
+            "Powerful Alexandra Falls in the Northwest Territories. A wide, thunderous curtain of water drops in tiered cascading bands over a sheer "
+            "thirty-two-meter limestone cliff into a deep gorge with chiseled rock facets. The gorge rim is crowned with golden northern birches and dark spruces "
+            "stylized into rhythmic multi-tiered woodcut canopy planes under an open northern sky."
+        )
+    }
+]
+
+PREFIX = (
+    "Coloring book page inspired by traditional woodblock printmaking and Vietnamese Dong Ho folk art aesthetic, "
+    "clean bold graphic woodcut line art, crisp black outlines, pure white background, zero shading, "
+    "black and white only, no grayscale, no halftones. Sophisticated adult landscape of "
+)
+
+SUFFIX = (
+    " Mature, poetic, graphic heritage line art, zero childish cartoon shapes, "
+    "generous open colorable compartments designed for smooth marker layering, adult coloring page. "
+    "Square 1:1 aspect ratio, full square canvas composition."
+)
+
+
+def update_prompts():
+    prompts_path = Path("prompts/canada_prompts.json")
+    pages = []
+    for item in SCENES_META:
+        full_prompt = f"{PREFIX}{item['subject']}{SUFFIX}"
+        pages.append({
+            "page_number": item["page_number"],
+            "region": item["region"],
+            "province": item["province"],
+            "display_title": item["display_title"],
+            "display_province": item["display_province"],
+            "title": item["title"],
+            "prompt": full_prompt
+        })
+
+    data = {
+        "book_title": "Autumn in Canada: A Scenic Journey Across Provinces & Territories (Dong Ho Layered Edition)",
+        "total_pages": 30,
+        "style_guidelines": {
+            "aspect_ratio": "1:1",
+            "art_style": "Dong Ho Woodblock Layered Line Art, bold graphic contours, multi-tiered canopy and water strata, generous open compartments for multi-layer color washing, zero micro-clutter, zero childish shapes",
+            "target_dpi": 300,
+            "target_resolution": "2588x2625"
+        },
+        "pages": pages
+    }
+
+    with open(prompts_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print(f"[OK] Successfully updated all 30 scenes in {prompts_path} with Dong Ho Layered Woodblock architecture!")
+
+
+if __name__ == "__main__":
+    update_prompts()
