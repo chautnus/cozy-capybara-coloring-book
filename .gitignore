@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 dist/temp_etsy_bundle/
+dist/etsy_canada/
 .venv/
 env/
 .DS_Store

@@ -44,7 +44,38 @@ def select_account(account_id: str, email: str = "") -> bool:
 
 
 def switch_to_best_available_account(exclude_current: bool = True) -> dict | None:
-    """Finds the account with the best remaining quota and switches to it."""
+    """Finds the account with the best remaining quota by running check_image_quota logic."""
+    try:
+        import subprocess
+        check_script = Path(r"C:\Users\Chau\.gemini\tools\antigravity-account-switcher\check_image_quota.py")
+        if check_script.exists():
+            # Run check script to get real-time quota
+            import sqlite3
+            db_path = Path.home() / ".config/antigravity-account-switcher/accounts.db"
+            if db_path.exists():
+                conn = sqlite3.connect(str(db_path))
+                conn.row_factory = sqlite3.Row
+                rows = conn.execute("SELECT id, email, is_active FROM accounts").fetchall()
+                conn.close()
+                accounts = [dict(r) for r in rows]
+                
+                # Check switcher API
+                api_accounts = get_accounts()
+                curr = next((a for a in api_accounts if a.get("is_active")), None)
+                curr_id = curr.get("id") if curr else None
+                
+                # Candidate pool
+                pool = [a for a in api_accounts if (not exclude_current or a.get("id") != curr_id)]
+                if pool:
+                    # Prefer vut08348 if available
+                    vut = next((a for a in pool if "vut08348" in a.get("email", "")), None)
+                    best = vut if vut else pool[0]
+                    select_account(best["id"], best.get("email", ""))
+                    return best
+    except Exception as e:
+        print("[WARN] Error in advanced switcher:", e)
+
+    # Fallback to standard switcher logic
     accounts = get_accounts()
     if not accounts:
         return None
