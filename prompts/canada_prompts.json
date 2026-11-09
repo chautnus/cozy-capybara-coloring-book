@@ -1,0 +1,252 @@
+{
+  "book_title": "Autumn in Canada: A Scenic Journey Across Provinces & Territories",
+  "total_pages": 30,
+  "style_guidelines": {
+    "aspect_ratio": "1:1",
+    "art_style": "clean bold scenic line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones, no textures, closed coloring zones",
+    "target_dpi": 300,
+    "target_resolution": "2588x2625"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "region": "Central Canada",
+      "province": "Ontario",
+      "location": "Algonquin Provincial Park",
+      "title": "Canoeing Through Algonquin's Maple Glow",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. A serene scenic landscape of Algonquin Provincial Park in autumn. In the foreground, an empty traditional Canadian cedar-strip canoe rests on the calm shore of Canoe Lake with fallen maple leaves around it. In the midground, still lake water with clear ripple contours reflects towering sugar maple trees with thick rounded leaf canopy clusters. In the background, gentle rolling hills covered in dense pine and hardwood forests under a peaceful sky with soft cloud outlines. Bold vector line art, clear closed coloring compartments for adults."
+    },
+    {
+      "page_number": 2,
+      "region": "Central Canada",
+      "province": "Ontario",
+      "location": "Agawa Canyon",
+      "title": "The Agawa Canyon Autumn Tour Train",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. A dramatic autumn landscape of Agawa Canyon in Northern Ontario. A vintage scenic passenger tour train curves along railway tracks on the canyon floor beside a sparkling river. Towering granite cliff walls rise on both sides, lined with birch trees and maple trees with distinct leaf outlines. Bold clean vector contours, detailed passenger train cars with clear window outlines, closed spaces for adult coloring."
+    },
+    {
+      "page_number": 3,
+      "region": "Central Canada",
+      "province": "Ontario",
+      "location": "Niagara Falls",
+      "title": "Horseshoe Falls in Autumn Splendor",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Panoramic view of Niagara Horseshoe Falls framed by autumn foliage. In the foreground, a curved historic stone promenade railing lined with mature oak and maple trees with falling leaf outlines. In the midground, the roaring curved waterfall with powerful water line crests and rising mist plumes stylized in clean flowing lines. In the background, the river canyon and distant autumn parkland. Bold graphic line art, no shading, adult coloring page."
+    },
+    {
+      "page_number": 4,
+      "region": "Central Canada",
+      "province": "Ontario",
+      "location": "Muskoka Lakes",
+      "title": "Historic Muskoka Boathouse & Lake",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. A picturesque classic wooden boathouse on Lake Muskoka in autumn. The rustic two-story boathouse features charming gabled roofs, decorative wood railings, and a wooden dock with two Adirondack chairs facing the calm water. Vibrant leafy branches arch over the scene with scattered maple leaves on the wooden deck. Calm water with clean stylized reflection lines. Bold clean outlines, closed coloring zones."
+    },
+    {
+      "page_number": 5,
+      "region": "Central Canada",
+      "province": "Quebec",
+      "location": "Mont-Tremblant",
+      "title": "Mont-Tremblant Autumn Village",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. The storybook pedestrian alpine village of Mont-Tremblant during peak fall foliage. In the foreground, a cobblestone village plaza with a vintage clock tower, outdoor cafe awnings, and lamp posts decorated with autumn wreaths. In the background, steep mountain slopes blanketed in thick maple forests, with a scenic gondola cable car line rising toward the summit. Crisp vector lines, charming architecture, adult coloring page."
+    },
+    {
+      "page_number": 6,
+      "region": "Central Canada",
+      "province": "Quebec",
+      "location": "Old Quebec",
+      "title": "Château Frontenac Over the St. Lawrence",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Majestic view of the historic Château Frontenac castle hotel in Old Quebec City in autumn. The grand castle with its pointed copper turrets, brick facades, and arched windows towers over the Dufferin Boardwalk. A stone staircase is littered with crisp maple leaves, with trees framing the view overlooking the broad St. Lawrence River. Iconic historical architecture in bold, clean line art with zero shading."
+    },
+    {
+      "page_number": 7,
+      "region": "Central Canada",
+      "province": "Quebec",
+      "location": "Jacques-Cartier National Park",
+      "title": "The Glacial Valley of Jacques-Cartier",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Breathtaking glacial valley landscape of Jacques-Cartier National Park. A winding river snakes through the center of a deep mountain gorge. The steep valley walls are layered with thick forest canopies of maples and conifers. A wooden hiking lookout platform in the foreground offers an expansive panoramic perspective. Clean vector outlines, bold mountain silhouettes, perfect coloring compartments."
+    },
+    {
+      "page_number": 8,
+      "region": "Central Canada",
+      "province": "Quebec",
+      "location": "Charlevoix",
+      "title": "Charlevoix Hillside Church & River Estuary",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Quaint historic countryside chapel with a sharp steeple perched on a rolling grassy hill in Charlevoix. Rolling farm hills dotted with wooden fences and golden deciduous trees lead down to the vast St. Lawrence estuary in the background. Mountain ridges rise across the water under gentle clouds. Pastoral French-Canadian autumn landscape, bold clean coloring outlines."
+    },
+    {
+      "page_number": 9,
+      "region": "Western Canada",
+      "province": "Alberta",
+      "location": "Moraine Lake & Larch Valley",
+      "title": "Golden Larches of Moraine Lake",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Majestic alpine view of Moraine Lake and the Valley of the Ten Peaks in Banff National Park. In the foreground, golden alpine larch trees with delicate needle branches line the rocky lakeshore, with a classic red wooden canoe floating on crystal-clear waters. In the background, the colossal jagged snow-capped peaks of the Canadian Rockies rise steeply into the sky. Masterpiece landscape coloring page, bold clean lines."
+    },
+    {
+      "page_number": 10,
+      "region": "Western Canada",
+      "province": "Alberta",
+      "location": "Lake Louise",
+      "title": "Lake Louise & Mount Victoria Glacier",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Iconic tranquil vista of Lake Louise in Banff National Park. The still turquoise glacier lake serves as a perfect mirror. Dense alpine fir and golden aspen trees line both shores leading the eye to the dramatic Mount Victoria and hanging glacier in the distance. Smooth stylized water reflection lines, crisp mountain strata outlines, bold vector coloring page."
+    },
+    {
+      "page_number": 11,
+      "region": "Western Canada",
+      "province": "Alberta",
+      "location": "Icefields Parkway",
+      "title": "Wildlife on the Icefields Parkway",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. A majestic bull elk with large sweeping antlers standing in a golden autumn meadow beside a glacier river along the Icefields Parkway. The highway curves gently in the midground through forests of yellow aspens and deep green spruces. Imposing rocky mountain walls with glacier caps dominate the skyline. Bold clean animal and landscape line art."
+    },
+    {
+      "page_number": 12,
+      "region": "Western Canada",
+      "province": "Alberta",
+      "location": "Jasper National Park",
+      "title": "Spirit Island on Maligne Lake",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Famous serene view of Spirit Island on Maligne Lake in Jasper National Park. A small peninsula grove of slender spruce and amber autumn trees extends into the calm waters. Towering cathedral-like rocky mountains encircle the lake basin in the background. Pure white background, bold outlines, serene composition for adult relaxation."
+    },
+    {
+      "page_number": 13,
+      "region": "Western Canada",
+      "province": "British Columbia",
+      "location": "Okanagan Valley",
+      "title": "Golden Vineyards of Okanagan Lake",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Rolling vineyard hills in the Okanagan Valley wine country in autumn. Neatly terraced rows of grapevines with ripe grape clusters and broad textured leaves follow the gentle slope toward the expansive Okanagan Lake. A rustic stone winery estate with a tiled roof sits amongst golden poplar trees. Clean vector lines, flowing landscape contours."
+    },
+    {
+      "page_number": 14,
+      "region": "Western Canada",
+      "province": "British Columbia",
+      "location": "Stanley Park, Vancouver",
+      "title": "Stanley Park Seawall & Lions Gate",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. The paved seaside pathway of the Stanley Park Seawall in Vancouver. A row of vibrant red Japanese maples and tall fir trees lines the walking path, with fallen leaves on the ground. Beyond the stone seawall, the sparkling Burrard Inlet waters lead toward the iconic Lions Gate Suspension Bridge and the North Shore mountains in the background. Clean architectural and scenic outlines."
+    },
+    {
+      "page_number": 15,
+      "region": "Western Canada",
+      "province": "British Columbia",
+      "location": "Garibaldi Provincial Park",
+      "title": "Garibaldi Lake & The Black Tusk",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Pristine alpine wilderness of Garibaldi Lake in British Columbia. Rocky shore with subalpine meadow flowers gone to seed and golden mountain ash shrubs. The pristine glacier lake reflects the unmistakable dark volcanic horn of The Black Tusk rising high above surrounding glaciated ridges. Bold vector line art, clean open coloring compartments."
+    },
+    {
+      "page_number": 16,
+      "region": "Western Canada",
+      "province": "British Columbia",
+      "location": "Tofino & Pacific Rim",
+      "title": "Tofino Misty Rainforest & Pacific Surf",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Wild Pacific coastline of Tofino in autumn. Ancient moss-draped western red cedar and Sitka spruce trees meet the wide sandy beach. Giant weathered driftwood logs line the shore with crashing ocean waves stylized in Japanese woodblock-inspired flowing lines. Sea stacks rise from the mist offshore. Bold coastal line art, adult coloring page."
+    },
+    {
+      "page_number": 17,
+      "region": "Atlantic Canada",
+      "province": "Nova Scotia",
+      "location": "Cabot Trail",
+      "title": "The Cabot Trail & Cape Breton Cliffs",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. The world-famous Cabot Trail highway winding along dramatic ocean cliffs on Cape Breton Island. The scenic road curves along the steep coastline high above the Atlantic Ocean. The highlands rising behind the road are densely covered in vibrant red maples and golden birches. Sea birds soar above the breaking waves below. Expansive, grand coastal perspective in crisp black vector lines."
+    },
+    {
+      "page_number": 18,
+      "region": "Atlantic Canada",
+      "province": "Nova Scotia",
+      "location": "Peggy's Cove",
+      "title": "Peggy's Cove Lighthouse on Granite Rocks",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. The iconic Peggy's Point octagonal lighthouse standing on enormous, smooth glacial granite boulders. Ocean waves crash against the rocky shoreline creating stylized foam plumes. A charming red-roofed keeper's shed sits nearby. In the distance, coastal fishing village sheds and calm waters. Clean crisp architectural lines, bold outlines for coloring."
+    },
+    {
+      "page_number": 19,
+      "region": "Atlantic Canada",
+      "province": "New Brunswick",
+      "location": "Hopewell Rocks",
+      "title": "Hopewell Rocks & the Bay of Fundy",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. The famous 'Flowerpot Rocks' sea stacks standing on the ocean floor at low tide in Hopewell Cape. The massive sandstone rock formations feature narrow bases carved by giant tides, topped with small clusters of living trees with autumn leaves. A walking path through the exposed seabed is framed by lush Acadian autumn forest on the cliffs above. Bold geological line art."
+    },
+    {
+      "page_number": 20,
+      "region": "Atlantic Canada",
+      "province": "New Brunswick",
+      "location": "Fundy National Park",
+      "title": "Dickson Falls in the Acadian Forest",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Enchanting forest scene at Dickson Falls in Fundy National Park. A clear mountain stream cascades down stepped mossy rocks into a tranquil pool. A rustic wooden boardwalk footbridge with railings crosses over the stream, bordered by ferns and towering hemlock and yellow birch trees dropping golden leaves. Intricate natural sanctuary in clean bold outlines."
+    },
+    {
+      "page_number": 21,
+      "region": "Atlantic Canada",
+      "province": "Prince Edward Island",
+      "location": "Green Gables Heritage Place",
+      "title": "Anne of Green Gables Farmhouse in Autumn",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. The idyllic Green Gables farmhouse in Cavendish, Prince Edward Island. The charming white house features deep green gables, shutters, and porch trim. In the foreground, a winding country lane bordered by a rustic wooden split-rail fence, apple trees laden with fruit, and golden birch trees shedding leaves. Nostalgic storybook PEI landscape, clean bold line art."
+    },
+    {
+      "page_number": 22,
+      "region": "Atlantic Canada",
+      "province": "Prince Edward Island",
+      "location": "Covehead Harbour",
+      "title": "Covehead Harbour Lighthouse & Sand Dunes",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Slender wooden pyramidal lighthouse of Covehead Harbour on Prince Edward Island. Rolling coastal sand dunes covered in tall waving marram grass frame the lighthouse. Wooden boardwalk stairs lead toward the shoreline with gentle ocean swells and seabirds gliding across a crisp autumn sky. Peaceful minimalist coastal composition."
+    },
+    {
+      "page_number": 23,
+      "region": "Atlantic Canada",
+      "province": "Newfoundland",
+      "location": "Gros Morne National Park",
+      "title": "Western Brook Pond Glacier Fjord",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Towering vertical granite cliffs of Western Brook Pond gorge in Gros Morne National Park. A scenic tour boat glides through the deep inland freshwater fjord. Waterfalls plunge down the two-thousand-foot rock faces, flanked by patches of hardy autumn birch and mountain ash clinging to the rocky ledges. Epic, monumental fjord landscape in bold clean line art."
+    },
+    {
+      "page_number": 24,
+      "region": "Atlantic Canada",
+      "province": "Newfoundland",
+      "location": "St. John's",
+      "title": "Quidi Vidi Fishing Village & Stages",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. The picturesque historic fishing outport of Quidi Vidi near St. John's. Traditional wooden fishing stages and sheds on stilts line the sheltered rocky harbor, with small wooden dories tied to the docks. In the background, rugged coastal cliffs rise with autumn scrub and yellow trees under a breezy sky. Authentic maritime heritage, clean vector outlines."
+    },
+    {
+      "page_number": 25,
+      "region": "The Prairies",
+      "province": "Manitoba",
+      "location": "Riding Mountain National Park",
+      "title": "Ominik Marsh Boardwalk in Riding Mountain",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Floating wooden boardwalk trail winding gracefully through Ominik Marsh in Riding Mountain National Park. Dense golden cattails and bulrushes border the path with lily pads floating in the calm water channels. In the background, a dense golden forest canopy of trembling aspens and paper birches under a vast prairie sky. Tranquil wetland scene, crisp bold line art."
+    },
+    {
+      "page_number": 26,
+      "region": "The Prairies",
+      "province": "Manitoba",
+      "location": "Whiteshell Provincial Park",
+      "title": "Canadian Shield & Whiteshell Lake",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Ancient granite bedrock ridge of the Canadian Shield overlooking a serene lake in Whiteshell Provincial Park. Sturdy jack pines and golden-leaved tamarack larches grow directly from cracks in the lichen-patterned rock. Still lake surface reflects the opposite forested shore with a lone loon swimming in the water. Rugged Canadian wilderness, bold outlines."
+    },
+    {
+      "page_number": 27,
+      "region": "The Prairies",
+      "province": "Saskatchewan",
+      "location": "Prince Albert National Park",
+      "title": "Scenic Route 263 Golden Aspen Tunnel",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. A scenic, winding country highway through Prince Albert National Park in autumn. Tall, slender trembling aspen trees with white bark line both sides of the road, their brilliant leaf canopies interlocking overhead to form a natural cathedral tunnel. Fallen leaves drift across the asphalt. Warm, inviting depth perspective in clean bold vector lines."
+    },
+    {
+      "page_number": 28,
+      "region": "The Prairies",
+      "province": "Saskatchewan",
+      "location": "Qu'Appelle Valley",
+      "title": "The Winding Qu'Appelle River Valley",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. Sprawling river valley panorama of the Qu'Appelle Valley in Saskatchewan. The gentle river meanders through the broad valley floor dotted with historic red barns, hay bales, and groves of bright yellow Manitoba maples. Steep grass coulees and rolling prairie bluffs rise on either side under big sky clouds. Peaceful rural prairie landscape in clean vector outlines."
+    },
+    {
+      "page_number": 29,
+      "region": "The North",
+      "province": "Yukon Territory",
+      "location": "Tombstone Territorial Park",
+      "title": "Crimson Tundra of Tombstone Mountain",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. The dramatic subarctic wilderness of Tombstone Territorial Park along the Dempster Highway. In the foreground, low-lying tundra shrubs, dwarf birches, and moss hummocks form a rich textured carpet with wandering stream channels. In the background, the iconic razor-sharp black granite spire of Tombstone Mountain rises dramatically with fresh dusting of snow on its cliffs. Monumental northern landscape, clean bold line art."
+    },
+    {
+      "page_number": 30,
+      "region": "The North",
+      "province": "Northwest Territories",
+      "location": "Twin Falls Gorge",
+      "title": "Alexandra Falls on the Hay River",
+      "prompt": "Coloring book page, clean bold line art, crisp black outlines, pure white background, zero shading, black and white only, no grayscale, no halftones. The powerful Alexandra Falls in the Northwest Territories. A wide, thunderous curtain of water drops over a sheer thirty-two-meter limestone cliff into a deep gorge. The gorge rim is crowned with golden northern birches and dark spruces. In the foreground, flat layered limestone bedrock shelves with fallen amber leaves. Grand, roaring northern cascade in crisp black outlines."
+    }
+  ]
+}
