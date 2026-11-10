@@ -9,7 +9,7 @@
 
 ## Active Projects
 1. **Book 1 (Completed):** *Barnaby's Peaceful Days* (Bold & Easy Cozy Capybara Coloring Book)
-2. **Book 2 (Current Active - Production 18/30):** *Autumn in Canada: A Scenic Journey Across Provinces & Territories* (Scenic Landscapes & Nature - Dong Ho Multi-Layer Woodblock)
+2. **Book 2 (Completed):** *Autumn in Canada: A Scenic Journey Across Provinces & Territories* (Scenic Landscapes & Nature - Dong Ho Multi-Layer Woodblock, 30/30 pages)
 3. **Cancelled / Replaced:** *AURA: The Emotional Mirror* (Abandoned per user directive)
 
 ## HOT FILES (fan-in >= 3)

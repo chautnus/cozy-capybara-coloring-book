@@ -26,6 +26,11 @@ from scripts.preprocess_lines import clean_and_threshold_image
 from scripts.add_landmark_typography import add_landmark_badge
 from check_image_quota import DB_PATH, refresh_token_if_needed
 
+try:
+    sys.stdout.reconfigure(line_buffering=True)
+except Exception:
+    pass
+
 GENERATE_URL = "https://daily-cloudcode-pa.googleapis.com/v1internal:generateContent"
 MODEL_ID = "gemini-3.1-flash-image"
 
@@ -149,7 +154,7 @@ def generate_single_page(page_meta: dict, preferred_email: str = "ad01.lamlumber
     ]
     img_bytes = None
     
-    for attempt in range(3):  # Up to 3 rotation passes
+    for attempt in range(6):  # Up to 6 rotation passes
         for email_candidate in accounts_pool:
             token, used_email = get_best_token(preferred_email=email_candidate)
             if not token:
@@ -177,8 +182,8 @@ def generate_single_page(page_meta: dict, preferred_email: str = "ad01.lamlumber
         if img_bytes:
             break
             
-        print(f"[INFO] All accounts currently in rolling burst window. Waiting 25s for cooldown before pass {attempt+2}...")
-        time.sleep(25)
+        print(f"[INFO] All accounts currently in rolling burst window. Waiting 30s for cooldown before pass {attempt+2}...")
+        time.sleep(30)
             
     if not img_bytes:
         print(f"[FAIL] Could not generate Page {page_num:02d} with any available account.")
