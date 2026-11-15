@@ -3,30 +3,50 @@
 ## 1. Trạng Thái Tổng Thể
 - **Dự án:** Book 3: Cozy Main Street (Charming Small-Town Corners)
 - **Kế hoạch:** `docs/planning/cozy-main-street.pipeline.md`
-- **Tiến độ Batch:**
-  - **Batch 1 (Trang 01–05):** ĐÃ HOÀN TẤT & ĐÃ ĐƯỢC USER DUYỆT (Commit `0214d82`).
-  - **Batch 2 (Trang 06–10):** ĐÃ SẢN XUẤT, KIỂM ĐỊNH ĐẠT CHUẨN 100%, ĐANG TRÌNH USER DUYỆT.
-  - **Batch 3–6 (Trang 11–30):** Đang chờ duyệt tuần tự (Human-in-the-Loop Gate).
+- **Tiến độ tổng hợp:** **27 / 30 trang** đã hoàn thành sản xuất và đạt chuẩn (90% dự án).
+  - **Batch 1 (Trang 01–05):** ĐÃ HOÀN TẤT & ĐƯỢC DUYỆT (Commit `0214d82`).
+  - **Batch 2 (Trang 06–10):** ĐÃ HOÀN TẤT & ĐƯỢC DUYỆT (Commit `aa49caf`).
+  - **Batch 3 (Trang 11–15):** ĐÃ SẢN XUẤT & ĐẠT CHUẨN 100% (Sheet `batch_03_approval_sheet.jpg`).
+  - **Batch 4 (Trang 16–20):** ĐÃ SẢN XUẤT & ĐẠT CHUẨN 100% (Sheet `batch_04_approval_sheet.jpg`).
+  - **Batch 5 (Trang 21–25):** ĐÃ SẢN XUẤT & ĐẠT CHUẨN 100% (Sheet `batch_05_approval_sheet.jpg`).
+  - **Batch 6 (Trang 26–30):** Đã xong Trang 26–27; Trang 28–30 đang tiến hành.
 
 ---
 
-## 2. Bảng Đo Lường Kỹ Thuật Batch 2 (Trang 06–10)
+## 2. Bảng Đo Lường Kỹ Thuật Chi Tiết (Trang 11 – 27)
 
-| Trang | Tiêu đề cảnh | Nhân vật | Mật độ nét | Mảng đen đặc (Max Radius) | Kiểm soát giải phẫu | Đánh giá |
-| :--- | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Trang 06** | The Milkcart Dairy Cow | Bác Bò Sữa Nhân Hóa | **10.61%** | **0.00%** ($R_{max} = 3.0\text{px}$) | Đầy đủ 2 sừng, 2 tai, 2 tay, váy & tạp dề, đẩy xe sữa 4 bình | **PASSED** |
-| **Trang 07** | The Pancake Squirrel | Chú Sóc Đầu Bếp | **11.99%** | **0.00%** ($R_{max} = 3.0\text{px}$) | Mũ chef, tạp dề, lật chồng bánh kếch, đuôi xù viền trắng | **PASSED** |
-| **Trang 08** | The Juice Porcupine | Bé Nhím Ép Nước Cam | **10.80%** | **0.00%** ($R_{max} = 3.0\text{px}$) | Lông nhím nét đơn rỗng, 2 tay cầm máy ép, thùng trái cây | **PASSED** |
-| **Trang 09** | The Owl's Bookstore | Thầy Cú Mèo Hiệu Sách | **14.12%** | **0.00%** ($R_{max} = 3.0\text{px}$) | Kính tròn, áo gile, 2 cánh, 2 chân bám thang sách, gáy sách rỗng | **PASSED** |
-| **Trang 10** | The Florist Deer | Nàng Hươu Sao Cắm Hoa | **14.80%** | **0.00%** ($R_{max} = 2.2\text{px}$) | Sừng hươu, 2 tay cắm hoa tulip vào bình tưới, găng tay & kéo | **PASSED** |
+### Batch 3: Artisan Crafts & Workshops (Trang 11 – 15)
+| Trang | Tiêu đề cảnh | Nhân vật | Mật độ nét | Mảng đen đặc | Đánh giá |
+| :---: | :--- | :--- | :---: | :---: | :---: |
+| **11** | The Tailor Hedgehog | Bác Nhím Thợ May | **11.72%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **12** | The Pottery Raccoon | Chú Gấu Mèo Xưởng Gốm | **13.69%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **13** | The Clockmaker Beaver | Bác Hải Ly Sửa Đồng Hồ | **14.39%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **14** | The Toymaker Mouse | Bé Chuột Thợ Mộc | **13.31%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **15** | The Apothecary Cat | Cô Mèo Tiệm Thảo Mộc | **13.29%** | **0.00%** ($R_{max} = 1.4\text{px}$) | **PASSED** |
 
-> **Tiêu chuẩn nghiệm thu:** 100% trang có mật độ nét $\le 15.00\%$, 0% mảng đen đặc, không có dị tật giải phẫu.
+### Batch 4: Town Square & Market Stalls (Trang 16 – 20)
+| Trang | Tiêu đề cảnh | Nhân vật | Mật độ nét | Mảng đen đặc | Đánh giá |
+| :---: | :--- | :--- | :---: | :---: | :---: |
+| **16** | The Painter Duck | Bác Vịt Họa Sĩ | **11.56%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **17** | The Ice Cream Penguin | Chú Cánh Cụt Xe Kem | **10.34%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **18** | The Market Sheep | Bác Cừu Sạp Nông Sản | **11.75%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **19** | The Post Office Pelican | Bác Bồ Nông Bưu Điện | **8.99%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **20** | The Flower Bicycle Corgi | Bé Corgi Xe Đạp Hoa | **14.46%** | **0.00%** ($R_{max} = 2.0\text{px}$) | **PASSED** |
 
----
+### Batch 5: Park Gazebo & Evening Shops (Trang 21 – 25)
+| Trang | Tiêu đề cảnh | Nhân vật | Mật độ nét | Mảng đen đặc | Đánh giá |
+| :---: | :--- | :--- | :---: | :---: | :---: |
+| **21** | The Gazebo Bluebird | Chú Chim Xanh Chòi Bát Giác | **14.50%** | **0.00%** ($R_{max} = 2.0\text{px}$) | **PASSED** |
+| **22** | The General Store Labrador | Bác Chó Vàng Tiệm Tạp Hóa | **12.57%** | **0.00%** ($R_{max} = 1.4\text{px}$) | **PASSED** |
+| **23** | The Nursery Koala | Chú Koala Vườn Cây | **13.91%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **24** | The Picnic Pond Frog | Bé Ếch Thả Thuyền Hồ Nước | **10.81%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **25** | The Pizza Baker Wolf | Chú Sói Lò Pizza Củi | **8.56%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
 
-## 3. Nhật Ký Tối Ưu Hóa Batch 2
-1. **Trang 06 (The Milkcart Dairy Cow):**
-   - Lần chạy đầu tiên đạt mật độ $16.81\%$ do prompt ban đầu chứa chi tiết gạch lát đường li ti (cobblestones) và hoa văn áo len dệt (knit cardigan).
-   - Đã tái cấu trúc prompt sang phong cách Bold & Easy tối giản: chuyển sang vỉa hè lát đá phiến lớn, váy trơn phẳng, xe 4 bình sữa lớn. Kết quả mật độ giảm ngoạn mục xuống **$10.61\%$**, nét dày dặn, không gian tô màu cực thoáng.
-2. **Trang 07–10:**
-   - Đạt chuẩn ngay từ lần đầu: $10.80\% - 14.80\%$, Max Radius $\le 3.0\text{px}$, giữ nguyên 100% lõi trắng cho các bề mặt chảo, sách, giá gỗ và máy ép.
+### Batch 6 (Tiến độ hiện tại)
+| Trang | Tiêu đề cảnh | Nhân vật | Mật độ nét | Mảng đen đặc | Đánh giá |
+| :---: | :--- | :--- | :---: | :---: | :---: |
+| **26** | The Retro Cinema Cat | Mèo Cổ Điển Rạp Phim | **11.94%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **27** | The Campfire Raccoon | Gấu Mèo Lửa Trại | **12.65%** | **0.00%** ($R_{max} = 3.0\text{px}$) | **PASSED** |
+| **28** | The Lantern Hedgehog | Bé Nhím Phố Đèn Lồng | *Đang tạo* | - | - |
+| **29** | The Cozy Diner Fox | Chú Cáo Băng Ghế Quán Đêm | *Đang tạo* | - | - |
+| **30** | The Baker Bear Hearth Dream | Bác Gấu Giấc Mơ Lò Sưởi | *Đang tạo* | - | - |
