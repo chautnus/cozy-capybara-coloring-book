@@ -338,7 +338,378 @@ const CANADA_PAGES = [
 
 let activeBook = "canada"; // Default to newest release
 
+const MAIN_STREET_PAGES = [
+  {
+    "page": 1,
+    "filter": "district_1",
+    "title": "The Baker Bear",
+    "sub": "Bác Gấu Bánh Quế Nướng Nóng",
+    "density": "12.24%",
+    "desc": "Bác Gấu lấy mẻ bánh quế cuộn nóng hổi từ lò nướng thơm lừng.",
+    "src": "assets/main_street/processed/page_01_clean.png",
+    "caption": "Bác Gấu Bánh Quế Nướng Nóng. Bác Gấu lấy mẻ bánh quế cuộn nóng hổi từ lò nướng thơm lừng. Chuẩn nét Bold & Easy (12.24% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 2,
+    "filter": "district_1",
+    "title": "The Espresso Fox",
+    "sub": "Cà Phê Chú Cáo Ban Mai",
+    "density": "10.50%",
+    "desc": "Chú Cáo pha chế những tách latte nghệ thuật thơm ngát bên máy pha espresso.",
+    "src": "assets/main_street/processed/page_02_clean.png",
+    "caption": "Cà Phê Chú Cáo Ban Mai. Chú Cáo pha chế những tách latte nghệ thuật thơm ngát bên máy pha espresso. Chuẩn nét Bold & Easy (10.50% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 3,
+    "filter": "district_1",
+    "title": "The Bagel Otter",
+    "sub": "Bánh Mì Vòng Rái Cá",
+    "density": "10.11%",
+    "desc": "Bé Rái Cá quết kem phô mai lên chiếc bagel hạt mè nướng giòn rụm.",
+    "src": "assets/main_street/processed/page_03_clean.png",
+    "caption": "Bánh Mì Vòng Rái Cá. Bé Rái Cá quết kem phô mai lên chiếc bagel hạt mè nướng giòn rụm. Chuẩn nét Bold & Easy (10.11% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 4,
+    "filter": "district_1",
+    "title": "The Tea Parlor Bunny",
+    "sub": "Trà Chiều Nàng Thỏ",
+    "density": "13.79%",
+    "desc": "Nàng Thỏ rót trà hoa cúc từ ấm sứ hoa văn thanh lịch bên khung cửa sổ.",
+    "src": "assets/main_street/processed/page_04_clean.png",
+    "caption": "Trà Chiều Nàng Thỏ. Nàng Thỏ rót trà hoa cúc từ ấm sứ hoa văn thanh lịch bên khung cửa sổ. Chuẩn nét Bold & Easy (13.79% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 5,
+    "filter": "district_1",
+    "title": "The Waffle Badger",
+    "sub": "Bánh Kẹp Bác Lửng",
+    "density": "13.09%",
+    "desc": "Bác Lửng nướng bánh waffle tổ ong vàng ươm rưới si-rô ngọt ngào.",
+    "src": "assets/main_street/processed/page_05_clean.png",
+    "caption": "Bánh Kẹp Bác Lửng. Bác Lửng nướng bánh waffle tổ ong vàng ươm rưới si-rô ngọt ngào. Chuẩn nét Bold & Easy (13.09% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 6,
+    "filter": "district_1",
+    "title": "The Milkcart Dairy Cow",
+    "sub": "Cỗ Xe Sữa Thủy Tinh Ban Mai",
+    "density": "10.61%",
+    "desc": "Bác Bò Sữa đẩy chiếc xe gỗ chở đầy những bình sữa tươi thủy tinh mát lành.",
+    "src": "assets/main_street/processed/page_06_clean.png",
+    "caption": "Cỗ Xe Sữa Thủy Tinh Ban Mai. Bác Bò Sữa đẩy chiếc xe gỗ chở đầy những bình sữa tươi thủy tinh mát lành. Chuẩn nét Bold & Easy (10.61% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 7,
+    "filter": "district_1",
+    "title": "The Pancake Squirrel",
+    "sub": "Căn Bếp Bánh Kếch Sóc Nâu",
+    "density": "11.99%",
+    "desc": "Chú Sóc đầu bếp khéo léo lật chồng bánh kếch thơm phức trên chảo phẳng.",
+    "src": "assets/main_street/processed/page_07_clean.png",
+    "caption": "Căn Bếp Bánh Kếch Sóc Nâu. Chú Sóc đầu bếp khéo léo lật chồng bánh kếch thơm phức trên chảo phẳng. Chuẩn nét Bold & Easy (11.99% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 8,
+    "filter": "district_1",
+    "title": "The Juice Porcupine",
+    "sub": "Quầy Nước Ép Bé Nhím",
+    "density": "10.80%",
+    "desc": "Bé Nhím ép nước cam tươi ngọt lịm bằng máy ép đòn bẩy gỗ cổ điển.",
+    "src": "assets/main_street/processed/page_08_clean.png",
+    "caption": "Quầy Nước Ép Bé Nhím. Bé Nhím ép nước cam tươi ngọt lịm bằng máy ép đòn bẩy gỗ cổ điển. Chuẩn nét Bold & Easy (10.80% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 9,
+    "filter": "district_2",
+    "title": "The Owl's Bookstore",
+    "sub": "Hiệu Sách Cũ Thầy Cú Mèo",
+    "density": "14.12%",
+    "desc": "Thầy Cú đeo kính tròn trên thang trượt thư viện tìm cuốn truyện cổ tích.",
+    "src": "assets/main_street/processed/page_09_clean.png",
+    "caption": "Hiệu Sách Cũ Thầy Cú Mèo. Thầy Cú đeo kính tròn trên thang trượt thư viện tìm cuốn truyện cổ tích. Chuẩn nét Bold & Easy (14.12% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 10,
+    "filter": "district_2",
+    "title": "The Florist Deer",
+    "sub": "Cửa Hàng Hoa Nàng Hươu Sao",
+    "density": "14.80%",
+    "desc": "Nàng Hươu sao cắm những cành hoa tulip và hướng dương vào bình tưới cổ.",
+    "src": "assets/main_street/processed/page_10_clean.png",
+    "caption": "Cửa Hàng Hoa Nàng Hươu Sao. Nàng Hươu sao cắm những cành hoa tulip và hướng dương vào bình tưới cổ. Chuẩn nét Bold & Easy (14.80% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 11,
+    "filter": "district_2",
+    "title": "The Tailor Hedgehog",
+    "sub": "Tiệm May Đo Bác Nhím",
+    "density": "11.72%",
+    "desc": "Bác Nhím thợ may đo đạc vải len và cắt may những bộ áo vest trang nhã.",
+    "src": "assets/main_street/processed/page_11_clean.png",
+    "caption": "Tiệm May Đo Bác Nhím. Bác Nhím thợ may đo đạc vải len và cắt may những bộ áo vest trang nhã. Chuẩn nét Bold & Easy (11.72% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 12,
+    "filter": "district_2",
+    "title": "The Pottery Raccoon",
+    "sub": "Xưởng Gốm Chú Gấu Mèo",
+    "density": "13.69%",
+    "desc": "Chú Gấu Mèo khéo léo tạo hình bình gốm đất nung trên bàn xoay thủ công.",
+    "src": "assets/main_street/processed/page_12_clean.png",
+    "caption": "Xưởng Gốm Chú Gấu Mèo. Chú Gấu Mèo khéo léo tạo hình bình gốm đất nung trên bàn xoay thủ công. Chuẩn nét Bold & Easy (13.69% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 13,
+    "filter": "district_2",
+    "title": "The Clockmaker Beaver",
+    "sub": "Tiệm Đồng Hồ Bác Hải Ly",
+    "density": "14.39%",
+    "desc": "Bác Hải Ly tỉ mỉ chỉnh từng bánh răng của chiếc đồng hồ cúc cu gỗ chạm khắc.",
+    "src": "assets/main_street/processed/page_13_clean.png",
+    "caption": "Tiệm Đồng Hồ Bác Hải Ly. Bác Hải Ly tỉ mỉ chỉnh từng bánh răng của chiếc đồng hồ cúc cu gỗ chạm khắc. Chuẩn nét Bold & Easy (14.39% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 14,
+    "filter": "district_2",
+    "title": "The Toymaker Mouse",
+    "sub": "Xưởng Đồ Chơi Gỗ Bé Chuột",
+    "density": "13.31%",
+    "desc": "Bé Chuột thợ mộc gọt đẽo chú ngựa gỗ bập bênh và đoàn tàu hỏa mini xinh xắn.",
+    "src": "assets/main_street/processed/page_14_clean.png",
+    "caption": "Xưởng Đồ Chơi Gỗ Bé Chuột. Bé Chuột thợ mộc gọt đẽo chú ngựa gỗ bập bênh và đoàn tàu hỏa mini xinh xắn. Chuẩn nét Bold & Easy (13.31% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 15,
+    "filter": "district_2",
+    "title": "The Apothecary Cat",
+    "sub": "Tiệm Thảo Mộc Cô Mèo Xám",
+    "density": "13.29%",
+    "desc": "Cô Mèo gom hoa oải hương khô và thảo mộc thơm lừng vào các lọ thủy tinh.",
+    "src": "assets/main_street/processed/page_15_clean.png",
+    "caption": "Tiệm Thảo Mộc Cô Mèo Xám. Cô Mèo gom hoa oải hương khô và thảo mộc thơm lừng vào các lọ thủy tinh. Chuẩn nét Bold & Easy (13.29% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 16,
+    "filter": "district_2",
+    "title": "The Painter Duck",
+    "sub": "Phòng Tranh Màu Nước Bác Vịt",
+    "density": "11.56%",
+    "desc": "Bác Vịt họa sĩ đội mũ beret vẽ bức tranh phong cảnh bờ hồ thị trấn trên giá vẽ.",
+    "src": "assets/main_street/processed/page_16_clean.png",
+    "caption": "Phòng Tranh Màu Nước Bác Vịt. Bác Vịt họa sĩ đội mũ beret vẽ bức tranh phong cảnh bờ hồ thị trấn trên giá vẽ. Chuẩn nét Bold & Easy (11.56% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 17,
+    "filter": "district_3",
+    "title": "The Ice Cream Penguin",
+    "sub": "Xe Kem Cánh Cụt Ban Mai",
+    "density": "10.34%",
+    "desc": "Chú Cánh Cụt múc những viên kem ốc quế mát lạnh bên chiếc xe đẩy có dù che sọc.",
+    "src": "assets/main_street/processed/page_17_clean.png",
+    "caption": "Xe Kem Cánh Cụt Ban Mai. Chú Cánh Cụt múc những viên kem ốc quế mát lạnh bên chiếc xe đẩy có dù che sọc. Chuẩn nét Bold & Easy (10.34% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 18,
+    "filter": "district_3",
+    "title": "The Market Sheep",
+    "sub": "Sạp Nông Sản Bác Cừu",
+    "density": "11.75%",
+    "desc": "Bác Cừu bày bán những thùng táo đỏ giòn, bí ngô vàng óng và mật ong hoa rừng.",
+    "src": "assets/main_street/processed/page_18_clean.png",
+    "caption": "Sạp Nông Sản Bác Cừu. Bác Cừu bày bán những thùng táo đỏ giòn, bí ngô vàng óng và mật ong hoa rừng. Chuẩn nét Bold & Easy (11.75% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 19,
+    "filter": "district_3",
+    "title": "The Post Office Pelican",
+    "sub": "Bưu Điện Bác Bồ Nông",
+    "density": "8.99%",
+    "desc": "Bác Bồ Nông đóng dấu niêm phong những lá thư gửi đi muôn phương bên hòm thư cổ.",
+    "src": "assets/main_street/processed/page_19_clean.png",
+    "caption": "Bưu Điện Bác Bồ Nông. Bác Bồ Nông đóng dấu niêm phong những lá thư gửi đi muôn phương bên hòm thư cổ. Chuẩn nét Bold & Easy (8.99% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 20,
+    "filter": "district_3",
+    "title": "The Flower Bicycle Corgi",
+    "sub": "Xe Đạp Hoa Bé Corgi",
+    "density": "14.46%",
+    "desc": "Bé Corgi chở giỏ mây ngập tràn hoa cúc dại dạo quanh đài phun nước công viên.",
+    "src": "assets/main_street/processed/page_20_clean.png",
+    "caption": "Xe Đạp Hoa Bé Corgi. Bé Corgi chở giỏ mây ngập tràn hoa cúc dại dạo quanh đài phun nước công viên. Chuẩn nét Bold & Easy (14.46% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 21,
+    "filter": "district_3",
+    "title": "The Gazebo Bluebird",
+    "sub": "Nhà Bát Giác Chú Chim Xanh",
+    "density": "14.50%",
+    "desc": "Chú Chim Xanh cất tiếng hát du dương bên giá nhạc trong nhà chòi gỗ công viên.",
+    "src": "assets/main_street/processed/page_21_clean.png",
+    "caption": "Nhà Bát Giác Chú Chim Xanh. Chú Chim Xanh cất tiếng hát du dương bên giá nhạc trong nhà chòi gỗ công viên. Chuẩn nét Bold & Easy (14.50% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 22,
+    "filter": "district_3",
+    "title": "The General Store Labrador",
+    "sub": "Tiệm Tạp Hóa Bác Chó Vàng",
+    "density": "12.57%",
+    "desc": "Bác Chó Labrador cân kẹo ngọt trên chiếc cân đồng cổ cho các bạn nhỏ ghé thăm.",
+    "src": "assets/main_street/processed/page_22_clean.png",
+    "caption": "Tiệm Tạp Hóa Bác Chó Vàng. Bác Chó Labrador cân kẹo ngọt trên chiếc cân đồng cổ cho các bạn nhỏ ghé thăm. Chuẩn nét Bold & Easy (12.57% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 23,
+    "filter": "district_3",
+    "title": "The Nursery Koala",
+    "sub": "Vườn Cây Chú Koala",
+    "density": "13.91%",
+    "desc": "Chú Koala chăm sóc những chậu sen đá mọng nước và gói hạt giống hoa rực rỡ.",
+    "src": "assets/main_street/processed/page_23_clean.png",
+    "caption": "Vườn Cây Chú Koala. Chú Koala chăm sóc những chậu sen đá mọng nước và gói hạt giống hoa rực rỡ. Chuẩn nét Bold & Easy (13.91% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 24,
+    "filter": "district_3",
+    "title": "The Picnic Pond Frog",
+    "sub": "Bờ Hồ Bé Ếch Thả Thuyền",
+    "density": "10.81%",
+    "desc": "Bé Ếch ngồi trên cầu tàu gỗ ngắm chiếc thuyền buồm giấy lướt nhẹ trên hồ hoa súng.",
+    "src": "assets/main_street/processed/page_24_clean.png",
+    "caption": "Bờ Hồ Bé Ếch Thả Thuyền. Bé Ếch ngồi trên cầu tàu gỗ ngắm chiếc thuyền buồm giấy lướt nhẹ trên hồ hoa súng. Chuẩn nét Bold & Easy (10.81% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 25,
+    "filter": "district_4",
+    "title": "The Pizza Baker Wolf",
+    "sub": "Tiệm Pizza Lò Củi Chú Sói",
+    "density": "8.56%",
+    "desc": "Chú Sói đầu bếp thân thiện đưa chiếc bánh pizza phô mai thơm phức vào lò nướng gạch.",
+    "src": "assets/main_street/processed/page_25_clean.png",
+    "caption": "Tiệm Pizza Lò Củi Chú Sói. Chú Sói đầu bếp thân thiện đưa chiếc bánh pizza phô mai thơm phức vào lò nướng gạch. Chuẩn nét Bold & Easy (8.56% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 26,
+    "filter": "district_4",
+    "title": "The Retro Cinema Cat",
+    "sub": "Rạp Chiếu Phim Chú Mèo Cổ Điển",
+    "density": "11.94%",
+    "desc": "Chú Mèo ôm hộp bắp rang bơ đứng trước biển hiệu rạp chiếu phim đèn neon cổ điển.",
+    "src": "assets/main_street/processed/page_26_clean.png",
+    "caption": "Rạp Chiếu Phim Chú Mèo Cổ Điển. Chú Mèo ôm hộp bắp rang bơ đứng trước biển hiệu rạp chiếu phim đèn neon cổ điển. Chuẩn nét Bold & Easy (11.94% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 27,
+    "filter": "district_4",
+    "title": "The Campfire Raccoon",
+    "sub": "Lửa Trại Sân Sau Chú Gấu Mèo",
+    "density": "14.18%",
+    "desc": "Chú Gấu Mèo ngồi nướng kẹo dẻo bên bếp lửa hồng và ngắm bầu trời sao qua kính thiên văn.",
+    "src": "assets/main_street/processed/page_27_clean.png",
+    "caption": "Lửa Trại Sân Sau Chú Gấu Mèo. Chú Gấu Mèo ngồi nướng kẹo dẻo bên bếp lửa hồng và ngắm bầu trời sao qua kính thiên văn. Chuẩn nét Bold & Easy (14.18% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 28,
+    "filter": "district_4",
+    "title": "The Lantern Hedgehog",
+    "sub": "Phố Đèn Lồng Bé Nhím",
+    "density": "13.61%",
+    "desc": "Bé Nhím dạo bước dưới những dãy đèn lồng giấy lung linh treo giữa các mái hiên quán.",
+    "src": "assets/main_street/processed/page_28_clean.png",
+    "caption": "Phố Đèn Lồng Bé Nhím. Bé Nhím dạo bước dưới những dãy đèn lồng giấy lung linh treo giữa các mái hiên quán. Chuẩn nét Bold & Easy (13.61% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 29,
+    "filter": "district_4",
+    "title": "The Cozy Diner Fox",
+    "sub": "Băng Ghế Quán Đêm Chú Cáo",
+    "density": "9.44%",
+    "desc": "Chú Cáo nhâm nhi ly kem soda cherry trên băng ghế quán ăn đêm ấm cúng khi ngoài trời mưa rơi.",
+    "src": "assets/main_street/processed/page_29_clean.png",
+    "caption": "Băng Ghế Quán Đêm Chú Cáo. Chú Cáo nhâm nhi ly kem soda cherry trên băng ghế quán ăn đêm ấm cúng khi ngoài trời mưa rơi. Chuẩn nét Bold & Easy (9.44% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  },
+  {
+    "page": 30,
+    "filter": "district_4",
+    "title": "The Baker Bear Hearth Dream",
+    "sub": "Giấc Mơ Lò Sưởi Bác Gấu",
+    "density": "9.77%",
+    "desc": "Bác Gấu ngủ say sưa bên lò sưởi ấm, khép lại một ngày bình yên trên Cozy Main Street.",
+    "src": "assets/main_street/processed/page_30_clean.png",
+    "caption": "Giấc Mơ Lò Sưởi Bác Gấu. Bác Gấu ngủ say sưa bên lò sưởi ấm, khép lại một ngày bình yên trên Cozy Main Street. Chuẩn nét Bold & Easy (9.77% mật độ nét, 0% mảng đen đặc).",
+    "is_redesigned": true
+  }
+];
+
 const BOOK_CONFIGS = {
+  main_street: {
+    brandBadge: "BOOK 3 • COZY ANIMAL MAIN STREET",
+    brandTitle: "Cozy Main Street",
+    badges: [
+      '<span class="badge badge-accent">Charming Small-Town Corners</span>',
+      '<span class="badge badge-success">8.5 &times; 8.5" Square Bleed</span>',
+      '<span class="badge badge-info">Zero Solid Black &bull; Bold &amp; Easy</span>'
+    ],
+    heading: "Cozy Main Street: Charming Small-Town Corners &amp; Animal Artisans",
+    desc: "A heartwarming commercial coloring book capturing 30 tranquil corner shops, bakeries, craft studios, and twilight streets. Masterfully formatted for <strong>Amazon KDP Paperback (64 pages)</strong> and <strong>Etsy Digital Download</strong> with single-sided print bleed shields.",
+    stats: { scenes: "30", pages: "64", dpi: "300", price: "$7.99" },
+    sectionSubtitle: "30 heartwarming small-town corners across 4 distinct Main Street districts.",
+    tabs: [
+      { id: "all", label: "All 30 Scenes" },
+      { id: "district_1", label: "Morning Bakeries (1-8)" },
+      { id: "district_2", label: "Artisan Crafts (9-16)" },
+      { id: "district_3", label: "Town Square (17-24)" },
+      { id: "district_4", label: "Twilight Corners (25-30)" }
+    ],
+    kdpTitle: "dist/main_street_interior_8.5x8.5.pdf",
+    kdpCover: "dist/main_street_full_cover_spread.pdf",
+    etsyZip: "dist/Cozy_Main_Street_Etsy_Digital_Bundle.zip",
+    keywords: [
+      "cozy main street adult coloring book small town corner shops",
+      "anthropomorphic animal artisans baker bear espresso fox owl bookstore",
+      "bold and easy clean line art alcohol markers stress relief relaxation",
+      "cottagecore hygge aesthetic charming street scenes mindfulness",
+      "single sided bleed shield backing pages large print seniors beginners",
+      "autumn spring cozy bakery craft workshops evening lanterns gift"
+    ],
+    tags: [
+      "cozy main street", "bold and easy book", "animal coloring pdf",
+      "small town coloring", "printable coloring", "procreate line art",
+      "stress relief gift", "cottagecore coloring", "coffee shop art",
+      "cute animal artisans", "alcohol marker art", "ipad coloring book",
+      "mindful coloring pages"
+    ]
+  },
   canada: {
     brandBadge: "BOOK 2 • SCENIC LANDSCAPES & NATURE",
     brandTitle: "Autumn in Canada",
@@ -504,7 +875,7 @@ function renderActiveBookPages(filterId = "all") {
   const container = document.getElementById("pages-grid");
   if (!container) return;
 
-  const dataset = activeBook === "canada" ? CANADA_PAGES : CAPYBARA_PAGES;
+  const dataset = activeBook === "canada" ? CANADA_PAGES : (activeBook === "main_street" ? MAIN_STREET_PAGES : CAPYBARA_PAGES);
   const filtered = filterId === "all"
     ? dataset
     : dataset.filter(item => item.filter === filterId);
